@@ -6,9 +6,10 @@ public class Usuario{
     private String categoria;
     private String genero;
     private double mediaDeLikes;
-    private double engajamento;
+    private double engajamento; //deixar na forma de String, pq se n dá erro na conversão para double - livia
 
-    public Usuario(int ranking, int quantidadePosts, int seguidores, String nome, String categoria, String genero, double mediaDeLikes, double engajamento) {
+    //alterei a ordem dos parâmetros para combinar com a ordem em que os atributos aparecem no data.txt para facilitar a leitura - livia
+    public Usuario(int ranking, String nome, String genero, String categoria, int quantidadePosts, int seguidores, double mediaDeLikes, double engajamento) {
         this.ranking = ranking;
         this.quantidadePosts = quantidadePosts;
         this.seguidores = seguidores;

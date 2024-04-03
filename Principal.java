@@ -1,9 +1,8 @@
 import java.io.IOException;
 
 public class Principal{
-    private LeitorTxt leitor = new LeitorTxt();
-
     public static void main(String[] args) throws IOException{
-        
+        LerTxt leitor = new LerTxt();
+        leitor.LeitorTxt("data.txt");
     }
 }
