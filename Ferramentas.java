@@ -1,14 +1,5 @@
-/**
- * Classe de métodos que podem ser utilizados pelas outras classes para converter e formatar valores contidos em Strings
- * @author Lívia Mendes
- * @version 03/04/2024 
- */
 public class Ferramentas {
-    /**
-     * Converte uma String em Int
-     * @param numero 
-     * @return valor convertido ou -1
-     */
+    
     public static int ConverterParaInt(String numero){
         try {
             return Integer.parseInt(numero);
@@ -17,11 +8,6 @@ public class Ferramentas {
         }
     }
 
-    /**
-     * Converte uma String cujo valor é uma porcentagem em Double
-     * @param numero
-     * @return valor convertido ou -1
-     */
     public static double ConverterParaDouble(String numero){
         try {
             return Double.parseDouble(numero);
@@ -30,29 +16,29 @@ public class Ferramentas {
         }
     }
 
-    public static double ConverterPorcentagem(String numero) {
-        numero = numero.replace("%", "");
-        double numeroConvertido = ConverterParaDouble(numero);
-        return numeroConvertido;
-    }
-
-    /**
-     * Formata uma String que contém um valor precedido por "K" ou "M", converte e multiplica pela potência representada pela letra
-     * @param numero 
-     * @return numeroConvertido
-     */
     public static int Multiplicador(String numero){
-        int numeroProcessado = 0;
+        int numeroConvertido = 0;
         numero = numero.replace(".", "");
         if(numero.contains("K")){
             numero = numero.replace("K", "");
-            numeroProcessado = ConverterParaInt(numero);
-            numeroProcessado *= 100;
+            numeroConvertido = ConverterParaInt(numero);
+            numeroConvertido *= 100;
         }else if(numero.contains("M")){
             numero = numero.replace("M", "");
-            numeroProcessado = ConverterParaInt(numero);
-            numeroProcessado *= 100000;
+            numeroConvertido = ConverterParaInt(numero);
+            numeroConvertido *= 100000;
         }
-        return numeroProcessado;
+        return numeroConvertido;
+    }
+
+    public static double ConverterEngajamento(String numero) {
+        numero = numero.replace("%", " ");
+        retirarAspas(numero);
+        return ConverterParaDouble(numero);
+    }
+
+    private static String retirarAspas(String numero) {
+        numero = numero.replace("\"", "");
+        return numero;
     }
 }
