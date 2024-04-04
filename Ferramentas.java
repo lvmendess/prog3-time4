@@ -18,7 +18,7 @@ public class Ferramentas {
     }
 
     /**
-     * Converte uma String em Double
+     * Converte uma String cujo valor é uma porcentagem em Double
      * @param numero
      * @return valor convertido ou -1
      */
@@ -28,6 +28,12 @@ public class Ferramentas {
         } catch (Exception e) {
             return -1;
         }
+    }
+
+    public static double ConverterPorcentagem(String numero) {
+        numero = numero.replace("%", "");
+        double numeroConvertido = ConverterParaDouble(numero);
+        return numeroConvertido;
     }
 
     /**

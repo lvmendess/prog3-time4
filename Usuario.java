@@ -11,7 +11,7 @@ public class Usuario{
     private String categoria;
     private String genero;
     private double mediaDeLikes;
-    private double engajamento; //deixar na forma de String, pq se n dá erro na conversão para double - livia
+    private double engajamento;
 
     /**
      * Construtor do objeto Usuário
@@ -24,7 +24,6 @@ public class Usuario{
      * @param mediaDeLikes
      * @param engajamento
      */
-    //alterei a ordem dos parâmetros para combinar com a ordem em que os atributos aparecem no data.txt para facilitar a leitura - livia
     public Usuario(int ranking, String nome, String genero, String categoria, int quantidadePosts, int seguidores, double mediaDeLikes, double engajamento) {
         this.ranking = ranking;
         this.quantidadePosts = quantidadePosts;
