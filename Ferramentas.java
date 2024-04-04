@@ -1,5 +1,14 @@
+/**
+ * Classe de métodos que podem ser utilizados pelas outras classes para converter e formatar valores contidos em Strings
+ * @author Lívia Mendes
+ * @version 03/04/2024 
+ */
 public class Ferramentas {
-    
+    /**
+     * Converte uma String em Int
+     * @param numero 
+     * @return valor convertido ou -1
+     */
     public static int ConverterParaInt(String numero){
         try {
             return Integer.parseInt(numero);
@@ -8,6 +17,11 @@ public class Ferramentas {
         }
     }
 
+    /**
+     * Converte uma String em Double
+     * @param numero
+     * @return valor convertido ou -1
+     */
     public static double ConverterParaDouble(String numero){
         try {
             return Double.parseDouble(numero);
@@ -16,18 +30,23 @@ public class Ferramentas {
         }
     }
 
+    /**
+     * Formata uma String que contém um valor precedido por "K" ou "M", converte e multiplica pela potência representada pela letra
+     * @param numero 
+     * @return numeroConvertido
+     */
     public static int Multiplicador(String numero){
-        int numeroConvertido = 0;
+        int numeroProcessado = 0;
         numero = numero.replace(".", "");
         if(numero.contains("K")){
             numero = numero.replace("K", "");
-            numeroConvertido = ConverterParaInt(numero);
-            numeroConvertido *= 100;
+            numeroProcessado = ConverterParaInt(numero);
+            numeroProcessado *= 100;
         }else if(numero.contains("M")){
             numero = numero.replace("M", "");
-            numeroConvertido = ConverterParaInt(numero);
-            numeroConvertido *= 100000;
+            numeroProcessado = ConverterParaInt(numero);
+            numeroProcessado *= 100000;
         }
-        return numeroConvertido;
+        return numeroProcessado;
     }
 }
