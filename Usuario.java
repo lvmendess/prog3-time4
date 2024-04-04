@@ -85,14 +85,15 @@ public class Usuario{
     }
     
     public void imprimirTudo(){
+        System.out.println("Nome: "+ nome);
         System.out.println("Ranking:" + ranking);
+        System.out.println("Gênero: "+ genero);
+        System.out.println("Categoria: "+ categoria);
         System.out.println("Posts: "+ quantidadePosts);
         System.out.println("Seguidores: "+ seguidores);
-        System.out.println("Nome: "+ nome);
-        System.out.println("Categoria: "+ categoria);
-        System.out.println("Gênero: "+ genero);
         System.out.println("Média de Likes: "+ mediaDeLikes);
         System.out.println("Engajamento: "+ engajamento);
+        System.out.println();
     }
 
 }

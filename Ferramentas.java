@@ -32,9 +32,10 @@ public class Ferramentas {
     }
 
     public static double ConverterEngajamento(String numero) {
-        numero = numero.replace("%", " ");
-        retirarAspas(numero);
+
+        numero = numero.replace("%", "");
         return ConverterParaDouble(numero);
+
     }
 
     private static String retirarAspas(String numero) {
