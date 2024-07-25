@@ -37,7 +37,7 @@
 <h2>Tarefas</h2>
 <h3>DONE</h3>
 <ul>
-  <li>Criar classe Tweet (propriedades, construtores, getters, setters) *[DONE]* {Lívia}</li>
+  <li>Criar classe Tweet (propriedades, construtores, getters, setters) {Lívia}</li>
 </ul>
 <h3>TO-DO</h3>
 <ul>
