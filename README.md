@@ -4,6 +4,12 @@
   <li>1. Abrir terminal do vscode</li>
   <li>2. Cole no terminal: git clone --single-branch --branch tp2-twitter-lista https://github.com/lvmendess/prog3-time4/</li>
 </ul>
+<h3>Como criar sua branch para não mexer na branch errada?</h3>
+<ul>
+  <li>Após clonar a branch, clique no botão "main" no canto inferior esquerdo do vscode</li>
+  <li>Clique em "New Branch"</li>
+  <li>Nomeie sua branch (favor colocar seu nome)</li>
+</ul>
 <h3>Como commitar direto do vscode?</h3>
 <ul>
   <li>1. Abrir terminal</li>
@@ -12,7 +18,7 @@
   <li>4. confirmar login na janela do navegador que aparecer</li>
   <li>5. Clicar no botão azul "Commit" na barra lateral do vscode</li>
   <li>6. Escrever nota de commit e salvar (botão de V no canto superior direito do vscode)</li>
-  <li>7. Clicar no botão azul "Sync changes" na barra lateral do vscode</li>
+  <li>7. Clicar no botão azul "Sync changes"/"Publish Branch" na barra lateral do vscode</li>
 </ul>
 </br>
 <h2>Perguntas à responder</h2>
