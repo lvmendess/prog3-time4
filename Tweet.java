@@ -2,6 +2,7 @@ public class Tweet{
     private String tweetId;
     private String handLabel;
     private int annotatorId;
+    private Tweet next = null;
 
     public Tweet(String tweetId, String handLabel, int annotatorId) {
         this.tweetId = tweetId;
@@ -15,6 +16,14 @@ public class Tweet{
 
     public void setTweetId(String tweetId) {
         this.tweetId = tweetId;
+    }
+
+    public Tweet getNext() {
+        return next;
+    }
+
+    public void setNext(Tweet next) {
+        this.next = next;
     }
 
     public String gethandLabel() {
