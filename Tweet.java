@@ -2,12 +2,13 @@ public class Tweet{
     private String tweetId;
     private String handLabel;
     private int annotatorId;
-    private Tweet next = null;
+    private Tweet next;
 
     public Tweet(String tweetId, String handLabel, int annotatorId) {
         this.tweetId = tweetId;
         this.handLabel = handLabel;
         this.annotatorId = annotatorId;
+        next = null;
     }
 
     public String getTweetId() {
