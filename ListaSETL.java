@@ -3,6 +3,7 @@ public class ListaSETL {
     int contPos;
     int contNeg;
     int contNeutral;
+
     public ListaSETL(){
         first=null;
         contPos=0;
@@ -13,9 +14,10 @@ public class ListaSETL {
         return first==null;
     }
     public void insertAtStart(Tweet t){
+        setContHandLabel(t);
         t.setNext(first);
         first = t;
-        setContHandLabel(t);
+        
     }
     public void print(){
         Tweet aux = first;

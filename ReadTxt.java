@@ -9,25 +9,28 @@ public class ReadTxt{
      * @param filepath
      */
     ListaSETL tweetList;
-    public ReadTxt(){
-       tweetList = new ListaSETL();
-    }
-    public void Read(String filepath){
+    public ReadTxt(){}
+
+    public ListaSETL Read(String filepath){
+        tweetList = new ListaSETL();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
-            reader.readLine();
-            for (int i = 0; i < 200; i++){
-              DivideLine(reader.readLine().trim());
+            String line;
+            while( (line=reader.readLine())!=null){
+                DivideLine(line.trim());
             }
-            tweetList.print();
-            System.out.println("Quantidade total de tweets: "+tweetList.getAllTweets());
+                  
+            /*tweetList.print();
+            /*System.out.println("Quantidade total de tweets: "+tweetList.getAllTweets());
             System.out.println("Quantidade total de tweets Negativos: "+tweetList.getContNeg());
             System.out.println("Quantidade total de tweets Positivos: "+tweetList.getContPos());
-            System.out.println("Quantidade total de tweets Neutros: "+tweetList.getContNeutral());
+            System.out.println("Quantidade total de tweets Neutros: "+tweetList.getContNeutral());*/
             reader.close();
+            return tweetList;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
     /**
      * Segrega os campos contidos na String, remove caracteres desnecessários e instancia o objeto com as informações presentes na String
@@ -41,9 +44,5 @@ public class ReadTxt{
         }
         Tweet tweet = new Tweet(fields[0], fields[1], Tools.toInt(fields[2]));
         tweetList.insertAtStart(tweet);
-
-
-        //System.out.println(tweet.getTweetId()+" "+tweet.gethandLabel()+" "+tweet.getAnnotatorId());
-
     }
 }

@@ -4,8 +4,9 @@ import java.io.IOException;
  */
 public class Main{
     public static void main(String[] args) throws IOException{
-        ReadTxt reader = new ReadTxt();
-        reader.Read("dataset\\English_Twitter_sentiment.csv");
+        Analysis analysis = new Analysis();
+        analysis.initialize();
+        analysis.CompareLists();
 
     }
 }
