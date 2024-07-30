@@ -19,7 +19,7 @@ public class OneList{ /*one list to rule them all, one list to find them, one li
         this.first = first;
     }
 
-    public void print(){
+    public void printAll(){
         ListSETL aux = first;
         if(empty()){
             System.out.println("OneList is empty!");

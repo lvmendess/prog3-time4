@@ -20,6 +20,6 @@ public class Analysis {
     }
     
     public void CompareLists(){
-        list.print();
+        list.printAll();
     } /*sanzio e josé*/
 }
