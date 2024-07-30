@@ -10,12 +10,6 @@ public class Tweeter {
     public String getAnnotatorId() {
         return annotatorId;
     }
-    
-    public int tweetCounter(){
-        int aux;
-        while(){}
-    }
-        
 }
     
 
