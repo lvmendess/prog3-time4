@@ -8,23 +8,17 @@ public class ReadTxt{
      * Lê o arquivo .txt
      * @param filepath
      */
-    ListaSETL tweetList;
+    ListSETL tweetList;
     public ReadTxt(){}
 
-    public ListaSETL Read(String filepath){
-        tweetList = new ListaSETL();
+    public ListSETL Read(String filepath){
+        tweetList = new ListSETL();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
             String line;
             while( (line=reader.readLine())!=null){
                 DivideLine(line.trim());
             }
-                  
-            /*tweetList.print();
-            /*System.out.println("Quantidade total de tweets: "+tweetList.getAllTweets());
-            System.out.println("Quantidade total de tweets Negativos: "+tweetList.getContNeg());
-            System.out.println("Quantidade total de tweets Positivos: "+tweetList.getContPos());
-            System.out.println("Quantidade total de tweets Neutros: "+tweetList.getContNeutral());*/
             reader.close();
             return tweetList;
         } catch (Exception e) {

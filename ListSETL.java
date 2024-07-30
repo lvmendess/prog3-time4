@@ -1,15 +1,42 @@
-public class ListaSETL {
+public class ListSETL {
     Tweet first;
+    ListSETL next;
     int contPos;
     int contNeg;
     int contNeutral;
+    String language;
 
-    public ListaSETL(){
+    public ListSETL(){
         first=null;
         contPos=0;
         contNeg=0;
         contNeutral=0;
     }
+    
+    public Tweet getFirst() {
+        return first;
+    }
+
+    public void setFirst(Tweet first) {
+        this.first = first;
+    }
+
+    public ListSETL getNext() {
+        return next;
+    }
+
+    public void setNext(ListSETL next) {
+        this.next = next;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
     public boolean empty(){
         return first==null;
     }

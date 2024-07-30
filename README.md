@@ -39,12 +39,15 @@
 <ul>
   <li>Criar classe Tweet (propriedades, construtores, getters, setters) {Lívia}</li>
   <li>Classe ListSETL//perguntas: 1, 3.1 e 3.2 {Duda}</li>
+  <li>Classe "Lista de listas" (OneList) {Lívia}</li>
+</ul>
+<h3>IN PROGRESS</h3>
+<ul>
+  <li>Classe Tweeter; attributes: lista de tweets, annotatorId; construtor, getters e setters //perguntas 4.1 e 4.2 {Pedro Ribas e Luísa}</li>
+  <li>Classe Analysis que chama métodos das outras classes e responde as perguntas {Lívia}</li>
 </ul>
 <h3>TO-DO</h3>
 <ul>
-  <li>Classe "Lista de listas" {Duda}</li>
-  <li>Classe Tweeter; attributes: lista de tweets, annotatorId; construtor, getters e setters //perguntas 4.1 e 4.2 {Pedro Ribas e Luísa}</li>
   <li>Método contador de tweets por Handlabel (Positivo, Negativo, Neutro) (Classe "Lista de listas") //perguntas 2.1, 2.2 {Sanzio}</li>
   <li>Método contador de tweets (Classe "Lista de listas") //perguntas: 1, 3.1 e 3.2 {Pedro José}</li>
-  <li>Classe Analysis que chama métodos das outras classes e responde as perguntas {Lívia}</li>
 </ul>
