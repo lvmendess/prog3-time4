@@ -60,9 +60,13 @@ public class Analysis {
         list.getNegativeVolume();
     }
 
-    public void mostNegativeLanguage(){} //3.1. Qual o idioma com mais tweets negativos?
+    public void mostNegativeLanguage(){
+        list.getMostNegLang();
+    } //3.1. Qual o idioma com mais tweets negativos?
 
-    public void mostPositiveLanguage(){} //3.2. Qual o idioma com mais tweets positivos?
+    public void mostPositiveLanguage(){
+        list.getMostPosLang();
+    } //3.2. Qual o idioma com mais tweets positivos?
 
     public void ranking(){} //3.3. É possível fazer um ranking dos idiomas?
 
