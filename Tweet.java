@@ -45,7 +45,7 @@ public class Tweet{
         this.annotatorId = annotatorId;
     }
 
-    public Sring getLanguage(){
+    public String getLanguage(){
         return language;
     }
 

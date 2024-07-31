@@ -8,6 +8,7 @@ public class Main{
         analysis.initialize();
         analysis.CompareLists();
         analysis.list.getVolume();
-
+        analysis.list.getMostPosLang();
+        analysis.list.getMostNegLang();
     }
 }

@@ -1,6 +1,6 @@
 public class OneList{ /*one list to rule them all, one list to find them, one list to bring them all and in the darkness bind them */
     ListSETL first;
-    
+
     public boolean empty(){
         return first==null;
     }
@@ -8,9 +8,9 @@ public class OneList{ /*one list to rule them all, one list to find them, one li
     public void insertAtStart(ListSETL t){
         t.setNext(first);
         first = t;
-        
+
     }
-    
+
     public ListSETL getFirst() {
         return first;
     }
@@ -44,5 +44,33 @@ public class OneList{ /*one list to rule them all, one list to find them, one li
         }
         System.out.println("Total volume of positive tweets:" + cont_pos);
         System.out.println("Total volume of negative tweets:" + cont_neg);
+    }
+
+    public void getMostPosLang() {
+        ListSETL aux = first;
+        int maior = 0;
+        String lang = "";
+        while (aux.getNext() != null) {
+            if (aux.getContPos() > maior) {
+                maior = aux.getContPos();
+                lang = aux.getLanguage();
+            }
+            aux = aux.getNext();
+        }
+        System.out.println("The language with the biggest volume of positive tweets is: " + lang + " with " + maior + " tweets");
+    }
+
+    public void getMostNegLang() {
+        ListSETL aux = first;
+        int cont_neg = 0;
+        String lang = "";
+        while (aux.getNext() != null) {
+            if (aux.getContNeg() > cont_neg) {
+                cont_neg = aux.getContNeg();
+                lang = aux.getLanguage();
+            }
+            aux = aux.getNext();
+        }
+        System.out.println("The language with the biggest volume of negative tweets is: " + lang + " with " + cont_neg+ " tweets");
     }
 }
