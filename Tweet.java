@@ -3,11 +3,13 @@ public class Tweet{
     private String handLabel;
     private int annotatorId;
     private Tweet next;
+    private String language;
 
-    public Tweet(String tweetId, String handLabel, int annotatorId) {
+    public Tweet(String tweetId, String handLabel, int annotatorId, String language) {
         this.tweetId = tweetId;
         this.handLabel = handLabel;
         this.annotatorId = annotatorId;
+        this.language = language;
         next = null;
     }
 
@@ -41,6 +43,14 @@ public class Tweet{
 
     public void setAnnotatorId(int annotatorId) {
         this.annotatorId = annotatorId;
+    }
+
+    public Sring getLanguage(){
+        return language;
+    }
+
+    public void setLanguage(String language){
+        this.language = language;
     }
 
 }
