@@ -4,16 +4,19 @@ import java.io.FileReader;
  * Classe com métodos para ler o arquivo .txt e manipular linhas retiradas deste 
  */
 public class ReadTxt{
+    ListSETL tweetList;
+    TweeterList tweetersList;
+
+    public ReadTxt(){}
+
     /**
      * Lê o arquivo .txt
      * @param filepath
-     * @param langugage
+     * @param language
      */
-    ListSETL tweetList;
-    public ReadTxt(){}
-
     public ListSETL Read(String filepath, String language){
         tweetList = new ListSETL();
+        tweetersList = new TweeterList();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
             String line;
@@ -21,6 +24,7 @@ public class ReadTxt{
                 DivideLine(line.trim(), language);
             }
             reader.close();
+
             return tweetList;
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,7 +34,7 @@ public class ReadTxt{
     /**
      * Segrega os campos contidos na String, remove caracteres desnecessários e instancia o objeto com as informações presentes na String
      * @param line 
-     * @param langugage
+     * @param language
      */
     public void DivideLine(String line, String language){
 
@@ -38,7 +42,7 @@ public class ReadTxt{
         for(int i=0; i<fields.length; i++){
             fields[i] = fields[i].replace("\"", "");
         }
-        Tweet tweet = new Tweet(fields[0], fields[1], Tools.toInt(fields[2]), language);
-        tweetList.insertAtStart(tweet);
+        Tweet tweet = new Tweet(fields[0], fields[1], Tools.toInt(fields[2]), language); //creates tweet
+        tweetList.insertAtStart(tweet); //inserts tweet into list which will be given to the ListSETL constructor through the Analysis class
     }
 }

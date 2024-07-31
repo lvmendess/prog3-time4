@@ -1,12 +1,15 @@
+import java.util.Arrays;
+
 public class Tweeter {
 
-    private ListSETL tweeterList;
-    private String annotatorId;
+    private ListSETL tweetList;
+    private int annotatorId;
     private String[] languages = new String[15];
+    private Tweeter next;
 
-    public Tweeter(String annotatorId, String language){
+    public Tweeter(int annotatorId, String language){
         this.annotatorId = annotatorId;
-        tweeterList = new ListSETL();
+        tweetList = new ListSETL();
         if(languages[0]==null){
             languages[0] = language;
         }else{
@@ -21,11 +24,37 @@ public class Tweeter {
         }
     }
 
-    public String getAnnotatorId() {
+    public int getAnnotatorId() {
         return annotatorId;
     }
 
-    /*TODO: metodo getTweeterList */
+    public String getLanguages() {
+        return Arrays.toString(languages);
+    }
+
+    public void addLanguages(String language) {
+        for(int i = 0; i<languages.length; i++){
+            if(languages[i]==null){
+                languages[i] = language;
+            }
+        }
+    }
+
+    public Tweeter getNext() {
+        return next;
+    }
+
+    public void setNext(Tweeter next) {
+        this.next = next;
+    }
+
+    public void addTweet(Tweet t){
+        tweetList.insertAtStart(t);
+    }
+
+    
+
+    /*TODO: metodo getTweetList */
 }
     
 

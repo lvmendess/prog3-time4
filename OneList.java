@@ -31,18 +31,26 @@ public class OneList{ /*one list to rule them all, one list to find them, one li
         }
     }
     
-    public void getVolume(){
+    public void getPositiveVolume(){
         ListSETL aux = first;
         int cont_pos = 0;
-        int cont_neg = 0;
         while (aux.getNext() != null ) {
             cont_pos += aux.getContPos();
-            cont_neg += aux.getContNeg();
             System.out.println("Total volume " + aux.getLanguage() +" of positive tweets:" + aux.getContPos());
-            System.out.println("Total volume " + aux.getLanguage() +" of negative tweets:" + aux.getContNeg());
             aux = aux.getNext();
         }
         System.out.println("Total volume of positive tweets:" + cont_pos);
+    }
+
+    public void getNegativeVolume(){
+        ListSETL aux = first;
+        int cont_neg = 0;
+        while (aux.getNext() != null ) {
+            cont_neg += aux.getContNeg();
+            System.out.println("Total volume " + aux.getLanguage() +" of negative tweets:" + aux.getContNeg());
+            aux = aux.getNext();
+        }
         System.out.println("Total volume of negative tweets:" + cont_neg);
     }
+    
 }

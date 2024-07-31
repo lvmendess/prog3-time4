@@ -40,16 +40,17 @@ public class ListSETL {
     public boolean empty(){
         return first==null;
     }
+
     public void insertAtStart(Tweet t){
         setContHandLabel(t);
         t.setNext(first);
         first = t;
-        
     }
+
     public void print(){
         Tweet aux = first;
         if(empty()){
-            System.out.println("Twitter List is empty!");
+            System.out.println("list is empty!");
         }else {
             while (aux != null) {
                 System.out.println(aux.getTweetId() + " " + aux.gethandLabel() + " " + aux.getAnnotatorId());
@@ -57,6 +58,7 @@ public class ListSETL {
             }
         }
     }
+
     public void setContHandLabel(Tweet t){
         if(t.gethandLabel().equals("Negative")){
             contNeg++;
@@ -66,13 +68,15 @@ public class ListSETL {
             contNeutral++;
         }
     }
+
     public int getAllTweets(){
         return contPos+contNeg+contNeutral;
     }
+
     public int getContPos(){return contPos;}
 
     public int getContNeg() {return contNeg;}
 
-    public int getContNeutral() {return  contNeutral;}
+    public int getContNeutral() {return contNeutral;}
 }
 

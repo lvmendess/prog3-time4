@@ -6,8 +6,6 @@ public class Main{
     public static void main(String[] args) throws IOException{
         Analysis analysis = new Analysis();
         analysis.initialize();
-        analysis.CompareLists();
-        analysis.list.getVolume();
-
+        System.out.println(analysis.tweeterList.countTweeters());
     }
 }
