@@ -7,6 +7,7 @@ public class Main{
         Analysis analysis = new Analysis();
         analysis.initialize();
         analysis.CompareLists();
+        analysis.list.getVolume();
 
     }
 }
