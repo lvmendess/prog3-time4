@@ -13,7 +13,7 @@ public class Analysis {
         ReadTxt reader = new ReadTxt();
 
         for(int i=0; i<lang.length; i++){
-            ListSETL list1 = reader.Read("dataset\\"+lang[i]+"_Twitter_sentiment.csv");
+            ListSETL list1 = reader.Read("dataset\\"+lang[i]+"_Twitter_sentiment.csv", lang[i]);
             list1.setLanguage(lang[i]);
             list.insertAtStart(list1);
         }
