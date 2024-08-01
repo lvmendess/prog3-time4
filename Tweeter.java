@@ -59,8 +59,9 @@ public class Tweeter {
         return tweetCount;
     }
     
-
-    /*TODO: metodo getTweetList */
+    public void getTweetList(){
+        tweetList.print();
+    }
 }
     
 
