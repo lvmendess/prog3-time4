@@ -68,7 +68,8 @@ public class Analysis {
     }
 
     public void ranking(){ //3.3. É possível fazer um ranking dos idiomas?
-
+        list.createRankPositive();
+        list.createRankNegative();
     }
 
     public void multilingualTweeters(){ //4.1 & 4.2
