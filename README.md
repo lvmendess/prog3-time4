@@ -52,6 +52,6 @@
 <h3>TO-DO</h3>
 <ul>
   <li>Adicionar método getTweeterList em Tweeter {Pedro Ribas e Luísa}</li>
-  <li>Javadoc {Lívia}</li>
+  <li>Javadoc {Cada um faz a documentação dos métodos/classes que fez}</li>
   <li>Solve bugs: detailed in Tweeter class and Main class</li>
 </ul>
