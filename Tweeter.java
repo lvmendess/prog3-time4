@@ -3,13 +3,15 @@ import java.util.Arrays;
 public class Tweeter {
 
     private ListSETL tweetList;
-    private int annotatorId;
+    private String annotatorId;
     private String[] languages = new String[15];
     private Tweeter next;
+    private int tweetCount;
 
-    public Tweeter(int annotatorId, String language){
+    public Tweeter(String annotatorId, String language){
         this.annotatorId = annotatorId;
         tweetList = new ListSETL();
+        this.tweetCount = 0;
         if(languages[0]==null){
             languages[0] = language;
         }else{
@@ -24,7 +26,7 @@ public class Tweeter {
         }
     }
 
-    public int getAnnotatorId() {
+    public String getAnnotatorId() {
         return annotatorId;
     }
 
@@ -48,10 +50,14 @@ public class Tweeter {
         this.next = next;
     }
 
-    public void addTweet(Tweet t){
+    public void addTweet(Tweet t){ /*BUG: somehow, it isn't inserting the tweet into the list */
         tweetList.insertAtStart(t);
+        tweetCount++;
     }
 
+    public int getTweetCount(){
+        return tweetCount;
+    }
     
 
     /*TODO: metodo getTweetList */

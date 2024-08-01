@@ -11,7 +11,7 @@ public class Tools {
         try {
             return Integer.parseInt(number);
         } catch (Exception e) {
-            return -1;
+            return -5;
         }
     }
     /**

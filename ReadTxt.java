@@ -42,7 +42,7 @@ public class ReadTxt{
         for(int i=0; i<fields.length; i++){
             fields[i] = fields[i].replace("\"", "");
         }
-        Tweet tweet = new Tweet(fields[0], fields[1], Tools.toInt(fields[2]), language); //creates tweet
+        Tweet tweet = new Tweet(fields[0], fields[1], fields[2], language); //creates tweet
         tweetList.insertAtStart(tweet); //inserts tweet into list which will be given to the ListSETL constructor through the Analysis class
     }
 }

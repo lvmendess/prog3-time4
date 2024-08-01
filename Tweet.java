@@ -1,11 +1,11 @@
 public class Tweet{
     private String tweetId;
     private String handLabel;
-    private int annotatorId;
+    private String annotatorId;
     private Tweet next;
     private String language;
 
-    public Tweet(String tweetId, String handLabel, int annotatorId, String language) {
+    public Tweet(String tweetId, String handLabel, String annotatorId, String language) {
         this.tweetId = tweetId;
         this.handLabel = handLabel;
         this.annotatorId = annotatorId;
@@ -37,11 +37,11 @@ public class Tweet{
         this.handLabel = handLabel;
     }
 
-    public int getAnnotatorId() {
+    public String getAnnotatorId() {
         return annotatorId;
     }
 
-    public void setAnnotatorId(int annotatorId) {
+    public void setAnnotatorId(String annotatorId) {
         this.annotatorId = annotatorId;
     }
 

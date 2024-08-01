@@ -34,11 +34,11 @@ public class TweeterList {
         }
     }
 
-    public Tweeter getTweeter(int id){
+    public Tweeter getTweeter(String id){
         Tweeter aux = first;
         if(empty()){return null;}
         else {
-            while (aux != null && aux.getAnnotatorId()!=id) {
+            while (aux != null && !(aux.getAnnotatorId().equals(id))) {
                 aux = aux.getNext();
             }
             return aux;

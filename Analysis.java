@@ -1,4 +1,3 @@
-/*comparar listas, fazer ranking, responder perguntas */
 public class Analysis {
     OneList list;
     TweeterList tweeterList;
@@ -26,20 +25,20 @@ public class Analysis {
 
     public void populateTweeterList(){
         ListSETL listLang = list.getFirst(); //first list
+        
         while(listLang!=null){ //iterates through lists
             Tweet tweet = listLang.getFirst(); //first tweet
+            
             while(tweet!=null){ //iterates through tweets inside of a list
+                
                 if(tweeterList.empty()){ //empty list
                     Tweeter tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
                     tweeterList.insertAtStart(tweeter);
-                    tweeter.addTweet(tweet);
+        
                 }else{ //list isn't empty
                     if(tweeterList.getTweeter(tweet.getAnnotatorId())==null){ //user doesn't exist yet
                         Tweeter tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
                         tweeterList.insertAtStart(tweeter);
-                        tweeter.addTweet(tweet);
-                    }else{ //user already exists
-                        tweeterList.getTweeter(tweet.getAnnotatorId()).addTweet(tweet);
                     }
                 }
                 tweet = tweet.getNext();
@@ -49,7 +48,7 @@ public class Analysis {
     }
 
     public void totalVolByLanguage(){ //1. Qual o volume de tweets para cada idioma?
-
+        list.getVolumeByLang();
     }
 
     public void totalVolPositive(){ //2.1. Qual o volume total de tweets positivos?
@@ -60,17 +59,21 @@ public class Analysis {
         list.getNegativeVolume();
     }
 
-    public void mostNegativeLanguage(){
+    public void mostNegativeLanguage(){ //3.1. Qual o idioma com mais tweets negativos?
         list.getMostNegLang();
-    } //3.1. Qual o idioma com mais tweets negativos?
+    }
 
-    public void mostPositiveLanguage(){
+    public void mostPositiveLanguage(){ //3.2. Qual o idioma com mais tweets positivos?
         list.getMostPosLang();
-    } //3.2. Qual o idioma com mais tweets positivos?
+    }
 
-    public void ranking(){} //3.3. É possível fazer um ranking dos idiomas?
+    public void ranking(){ //3.3. É possível fazer um ranking dos idiomas?
 
-    public void multilingualTweeters(){} //4.1 & 4.2
+    }
+
+    public void multilingualTweeters(){ //4.1 & 4.2
+
+    }
 
     public OneList getList() {
         return list;

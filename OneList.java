@@ -30,11 +30,19 @@ public class OneList{ /*one list to rule them all, one list to find them, one li
             }
         }
     }
+
+    public void getVolumeByLang(){
+        ListSETL aux = first;
+        while (aux != null) {
+            System.out.println("Total volume of " + aux.getLanguage() +" tweets:" + aux.getAllTweets());
+            aux = aux.getNext();
+        }
+    }
     
     public void getPositiveVolume(){
         ListSETL aux = first;
         int cont_pos = 0;
-        while (aux.getNext() != null ) {
+        while (aux != null) {
             cont_pos += aux.getContPos();
             System.out.println("Total volume " + aux.getLanguage() +" of positive tweets:" + aux.getContPos());
             aux = aux.getNext();
@@ -45,7 +53,7 @@ public class OneList{ /*one list to rule them all, one list to find them, one li
     public void getNegativeVolume(){
         ListSETL aux = first;
         int cont_neg = 0;
-        while (aux.getNext() != null ) {
+        while (aux!= null) {
             cont_neg += aux.getContNeg();
             System.out.println("Total volume " + aux.getLanguage() +" of negative tweets:" + aux.getContNeg());
             aux = aux.getNext();

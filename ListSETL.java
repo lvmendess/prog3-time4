@@ -1,10 +1,10 @@
 public class ListSETL {
-    Tweet first;
-    ListSETL next;
-    int contPos;
-    int contNeg;
-    int contNeutral;
-    String language;
+    private Tweet first;
+    private ListSETL next;
+    private int contPos;
+    private int contNeg;
+    private int contNeutral;
+    private String language;
 
     public ListSETL(){
         first=null;
