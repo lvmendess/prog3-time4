@@ -25,20 +25,20 @@ public class Analysis {
 
     public void populateTweeterList(){
         ListSETL listLang = list.getFirst(); //first list
-        
-        while(listLang!=null){ //iterates through lists
-            Tweet tweet = listLang.getFirst(); //first tweet
+        //listLang.print();
+       while(listLang!=null){ //iterates through lists
+           Tweet tweet = listLang.getFirst(); //first tweet
             
-            while(tweet!=null){ //iterates through tweets inside of a list
-                
+           while(tweet!=null){ //iterates through tweets inside of a list
+
                 if(tweeterList.empty()){ //empty list
                     Tweeter tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
                     tweeterList.insertAtStart(tweeter);
         
-                }else{ //list isn't empty
+                }else{ //list isn't empty 
                     if(tweeterList.getTweeter(tweet.getAnnotatorId())==null){ //user doesn't exist yet
                         Tweeter tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
-                        tweeterList.insertAtStart(tweeter);
+                       tweeterList.insertAtStart(tweeter);
                     }
                 }
                 tweet = tweet.getNext();

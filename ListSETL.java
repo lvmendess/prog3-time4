@@ -52,7 +52,7 @@ public class ListSETL {
         if(empty()){
             System.out.println("list is empty!");
         }else {
-            while (aux != null) {
+            while ( aux != null) {
                 System.out.println(aux.getTweetId() + " " + aux.gethandLabel() + " " + aux.getAnnotatorId());
                 aux = aux.getNext();
             }
