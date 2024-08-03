@@ -44,14 +44,9 @@
   <li>Classe Tweeter; attributes: lista de tweets, annotatorId; construtor, getters e setters //perguntas 4.1 e 4.2 {Pedro Ribas e Luísa}</li>
   <li>Bug: atributo language em Tweeter (Resolvido) {Duda}</li>
   <li>Método contador de tweets (Classe "Lista de listas") //perguntas: 1, 3.1 e 3.2 {Pedro José}</li>
+  <li>Adicionar método getTweeterList em Tweeter {Pedro Ribas e Luísa}</li>
+  <li>bugs: detailed in Tweeter class and Main class {Lívia, Duda, Pedro Ribas}</li>
+  <li>Método de Tweeters poliglotas {Lívia}</li>
 </ul>
 <h3>IN PROGRESS</h3>
-<ul>
-  <li>Classe Analysis que chama métodos das outras classes e responde as perguntas {Lívia}</li>
-</ul>
-<h3>TO-DO</h3>
-<ul>
-  <li>Adicionar método getTweeterList em Tweeter {Pedro Ribas e Luísa}</li>
   <li>Javadoc {Cada um faz a documentação dos métodos/classes que fez}</li>
-  <li>Solve bugs: detailed in Tweeter class and Main class</li>
-</ul>

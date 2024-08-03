@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Tweeter {
 
     private ListSETL tweetList;
@@ -31,15 +29,38 @@ public class Tweeter {
     }
 
     public String getLanguages() {
-        return Arrays.toString(languages);
-    }
-
-    public void addLanguages(String language) {
-        for(int i = 0; i<languages.length; i++){
-            if(languages[i]==null){
-                languages[i] = language;
+        String lang = "";
+        for(int i=0; i<languages.length; i++){
+            if(languages[i]!=null){
+                lang += languages[i];
+                if(languages[i+1]!=null){
+                    lang +=", ";
+                }
             }
         }
+        return lang;
+    }
+
+    public void addLanguages(Tweet t) {
+        int i = 0;
+        while(languages[i]!=null && i<languages.length){
+            if(languages[i].equals(t.getLanguage())){
+                break;
+            }else{
+                i++;
+            }
+        }
+        languages[i] = t.getLanguage();
+    }
+
+    public int getLangNum(){
+        int cont = 1;
+        for(int i=1; i<languages.length; i++){
+            if(languages[i]!=null){
+                cont++;
+            }
+        }
+        return cont;
     }
 
     public Tweeter getNext() {
@@ -50,17 +71,16 @@ public class Tweeter {
         this.next = next;
     }
 
-    public void addTweet(Tweet t){ /*BUG: somehow, it isn't inserting the tweet into the list */
-        tweetList.insertAtStart(t);
-        tweetCount++;
-    }
-
     public int getTweetCount(){
         return tweetCount;
     }
     
     public void getTweetList(){
         tweetList.print();
+    }
+
+    public void print(){
+        System.out.println("Id: "+this.getAnnotatorId()+"; nº languages: "+getLangNum()+"; languages: "+getLanguages());
     }
 }
     

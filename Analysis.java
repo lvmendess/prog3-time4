@@ -25,22 +25,17 @@ public class Analysis {
 
     public void populateTweeterList(){
         ListSETL listLang = list.getFirst(); //first list
-        //listLang.print();
-       while(listLang!=null){ //iterates through lists
-           Tweet tweet = listLang.getFirst(); //first tweet
-            
+        while(listLang!=null){ //iterates through lists
+           Tweet tweet = listLang.getFirst(); //first tweet  
+           Tweeter tweeter = null;
            while(tweet!=null){ //iterates through tweets inside of a list
-
-                if(tweeterList.empty()){ //empty list
-                    Tweeter tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
+                if(tweeterList.getTweeter(tweet.getAnnotatorId())!=null){
+                    tweeter = tweeterList.getTweeter(tweet.getAnnotatorId());
+                }else{
+                    tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
                     tweeterList.insertAtStart(tweeter);
-        
-                }else{ //list isn't empty 
-                    if(tweeterList.getTweeter(tweet.getAnnotatorId())==null){ //user doesn't exist yet
-                        Tweeter tweeter = new Tweeter(tweet.getAnnotatorId(), tweet.getLanguage());
-                       tweeterList.insertAtStart(tweeter);
-                    }
                 }
+                tweeter.addLanguages(tweet);
                 tweet = tweet.getNext();
             }
             listLang = listLang.getNext();
@@ -69,11 +64,12 @@ public class Analysis {
 
     public void ranking(){ //3.3. É possível fazer um ranking dos idiomas?
         list.createRankPositive();
+        System.out.println();
         list.createRankNegative();
     }
 
     public void multilingualTweeters(){ //4.1 & 4.2
-
+        tweeterList.getMultilingual();
     }
 
     public OneList getList() {

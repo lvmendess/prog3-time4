@@ -11,7 +11,6 @@ public class OneList { /*
     public void insertAtStart(ListSETL t) {
         t.setNext(first);
         first = t;
-
     }
 
     public ListSETL getFirst() {
@@ -47,7 +46,6 @@ public class OneList { /*
         int cont_pos = 0;
         while (aux != null) {
             cont_pos += aux.getContPos();
-            System.out.println("Total volume " + aux.getLanguage() + " of positive tweets:" + aux.getContPos());
             aux = aux.getNext();
         }
         System.out.println("Total volume of positive tweets:" + cont_pos);
@@ -58,7 +56,6 @@ public class OneList { /*
         int cont_neg = 0;
         while (aux != null) {
             cont_neg += aux.getContNeg();
-            System.out.println("Total volume " + aux.getLanguage() + " of negative tweets:" + aux.getContNeg());
             aux = aux.getNext();
         }
         System.out.println("Total volume of negative tweets:" + cont_neg);
