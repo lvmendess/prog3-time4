@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 /**
- * Classe com métodos para ler o arquivo .txt e manipular linhas retiradas deste 
+ * Class responsible for reading .txt file and manipulate lines taken from it 
  */
 public class ReadTxt{
     ListSETL tweetList;
@@ -10,7 +10,7 @@ public class ReadTxt{
     public ReadTxt(){}
 
     /**
-     * Lê o arquivo .txt
+     * Reads .txt file
      * @param filepath
      * @param language
      */
@@ -32,7 +32,7 @@ public class ReadTxt{
         return null;
     }
     /**
-     * Segrega os campos contidos na String, remove caracteres desnecessários e instancia o objeto com as informações presentes na String
+     * Segregates fields contained in the String, remove unnecessary characters and instantiates object with the information given
      * @param line 
      * @param language
      */

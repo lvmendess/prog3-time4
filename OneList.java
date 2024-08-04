@@ -4,23 +4,41 @@ public class OneList { /*
                         */
     ListSETL first;
 
+    /**
+     * @return if list has no element yet
+     */
     public boolean empty() {
         return first == null;
     }
 
+    /**
+     * Inserts list at the start
+     * @param t
+     */
     public void insertAtStart(ListSETL t) {
         t.setNext(first);
-        first = t;
+        setFirst(t);
     }
 
+    /**
+     * @return instance of the list which occupies the top of the list at the moment
+     */
     public ListSETL getFirst() {
         return first;
     }
 
+    /**
+     * sets first list of the list
+     * @param first
+     */
     public void setFirst(ListSETL first) {
         this.first = first;
     }
 
+    /**
+     * prints all tweets of all languages
+     * @deprecated
+     */
     public void printAll() {
         ListSETL aux = first;
         if (empty()) {
@@ -33,6 +51,9 @@ public class OneList { /*
         }
     }
 
+    /**
+     * prints total volume of tweets in each language
+     */
     public void getVolumeByLang() {
         ListSETL aux = first;
         while (aux != null) {
@@ -41,6 +62,9 @@ public class OneList { /*
         }
     }
 
+    /**
+     * prints total volume of positive tweets over all languages
+     */
     public void getPositiveVolume() {
         ListSETL aux = first;
         int cont_pos = 0;
@@ -51,6 +75,9 @@ public class OneList { /*
         System.out.println("Total volume of positive tweets:" + cont_pos);
     }
 
+    /**
+     * prints total volume of negative tweets over all languages
+     */
     public void getNegativeVolume() {
         ListSETL aux = first;
         int cont_neg = 0;
@@ -61,6 +88,9 @@ public class OneList { /*
         System.out.println("Total volume of negative tweets:" + cont_neg);
     }
 
+    /**
+     * prints which language has the bigger amount of positive tweets and its amount of which
+     */
     public void getMostPosLang() {
         ListSETL aux = first;
         int cont_pos = 0;
@@ -75,6 +105,9 @@ public class OneList { /*
         System.out.println("The language with the biggest volume of positive tweets is: " + lang + " with " + cont_pos+ " tweets");
     }
 
+    /**
+     * prints which language has the bigger amount of negative tweets and its amount of which
+     */
     public void getMostNegLang() {
         ListSETL aux = first;
         int cont_neg = 0;
@@ -89,6 +122,9 @@ public class OneList { /*
         System.out.println("The language with the biggest volume of negative tweets is: " + lang + " with " + cont_neg + " tweets");
     }
 
+    /**
+     * Ranks languages by its amounts of positive tweets
+     */
     public void createRankPositive() {
         int cont_pos = 0;
         ListSETL aux = first;
@@ -125,6 +161,10 @@ public class OneList { /*
             aux = first;
         }
     }
+
+    /**
+     * Ranks languages by its amounts of negative tweets
+     */
     public void createRankNegative() {
         int cont_neg = 0;
         ListSETL aux = first;

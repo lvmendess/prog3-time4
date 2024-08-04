@@ -6,6 +6,11 @@ public class Tweeter {
     private Tweeter next;
     private int tweetCount;
 
+    /**
+     * Creates a Tweeter
+     * @param annotatorId
+     * @param language
+     */
     public Tweeter(String annotatorId, String language){
         this.annotatorId = annotatorId;
         tweetList = new ListSETL();
@@ -24,10 +29,16 @@ public class Tweeter {
         }
     }
 
+    /**
+     * @return annotatorId
+     */
     public String getAnnotatorId() {
         return annotatorId;
     }
 
+    /**
+     * @return String of languages in which the Tweeter has tweeted
+     */
     public String getLanguages() {
         String lang = "";
         for(int i=0; i<languages.length; i++){
@@ -41,6 +52,10 @@ public class Tweeter {
         return lang;
     }
 
+    /**
+     * Adds languages to the Tweeter's arrays of languages
+     * @param t
+     */
     public void addLanguages(Tweet t) {
         int i = 0;
         while(languages[i]!=null && i<languages.length){
@@ -53,6 +68,10 @@ public class Tweeter {
         languages[i] = t.getLanguage();
     }
 
+    /**
+     * 
+     * @return number of tweeted languages
+     */
     public int getLangNum(){
         int cont = 1;
         for(int i=1; i<languages.length; i++){
@@ -63,22 +82,39 @@ public class Tweeter {
         return cont;
     }
 
+    /**
+     * @return next
+     */
     public Tweeter getNext() {
         return next;
     }
 
+    /**
+     * @param next
+     */
     public void setNext(Tweeter next) {
         this.next = next;
     }
 
+    /**
+     * @return number of tweets
+     * @deprecated no longer needed
+     */
     public int getTweetCount(){
         return tweetCount;
     }
     
+    /**
+     * prints list of tweets
+     * @deprecated
+     */
     public void getTweetList(){
         tweetList.print();
     }
 
+    /**
+     * prints the tweeter's id, number of tweeted languages and its names
+     */
     public void print(){
         System.out.println("Id: "+this.getAnnotatorId()+"; nº languages: "+getLangNum()+"; languages: "+getLanguages());
     }

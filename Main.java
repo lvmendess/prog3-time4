@@ -1,6 +1,6 @@
 import java.io.IOException;
 /**
- * Classe que chama os métodos
+ * Invokes methods of Analysis to answer each question
  */
 public class Main{
     public static void main(String[] args) throws IOException{

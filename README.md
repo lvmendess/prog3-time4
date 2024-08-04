@@ -47,6 +47,5 @@
   <li>Adicionar método getTweeterList em Tweeter {Pedro Ribas e Luísa}</li>
   <li>bugs: detailed in Tweeter class and Main class {Lívia, Duda, Pedro Ribas}</li>
   <li>Método de Tweeters poliglotas {Lívia}</li>
+  <li>Javadoc {Lívia}</li>
 </ul>
-<h3>IN PROGRESS</h3>
-  <li>Javadoc {Cada um faz a documentação dos métodos/classes que fez}</li>

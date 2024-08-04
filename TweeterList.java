@@ -1,27 +1,48 @@
 public class TweeterList {
     private Tweeter first;
 
+    /**
+     * no args constructor
+     * initializes list of tweeters
+     */
     public TweeterList() {
         this.first = null;
     }
 
+    /**
+     * @return first tweeter
+     */
     public Tweeter getFirst() {
         return first;
     }
 
+    /**
+     * sets first tweeter
+     * @param t
+     */
     public void setFirst(Tweeter t) {
         this.first = t;
     }
 
+    /**
+     * @return if list is empty
+     */
     public boolean empty(){
         return first==null;
     }
 
+    /**
+     * inserts tweeter at the start of the list
+     * @param tw
+     */
     public void insertAtStart(Tweeter tw){
         tw.setNext(first);
         setFirst(tw);
     }
 
+    /**
+     * calls each tweeter's print() method
+     */
     public void print(){
         Tweeter aux = first;
         if(empty()){
@@ -34,6 +55,11 @@ public class TweeterList {
         }
     }
 
+    /**
+     * get tweeter by id
+     * @param id
+     * @return Tweeter; null if not found
+     */
     public Tweeter getTweeter(String id){
         Tweeter aux = first;
         if(empty()){return null;} //lista vazia
@@ -48,26 +74,14 @@ public class TweeterList {
         }else{
             return null;
         }
-        /*}else{
-            while(aux!=null){
-                if(!(aux.getAnnotatorId().equals(id))){
-                    aux = aux.getNext();
-                }
-                return aux;
-            }
-        }
-        /*else if(aux.getAnnotatorId().equals(id)){
-            return aux;
-        }else {
-            //aux = aux.getNext();
-            while(aux!=null){
-                if(!(aux.getAnnotatorId().equals(id))){
-                    aux = aux.getNext();
-                }
-            }*/
-            return aux;
+        return aux;
     }
 
+    /**
+     * verifies wether the tweeter already exists in the list by its id
+     * @param id
+     * @return true if it exists, false if it doesn't
+     */
     public boolean exists(String id){
         if(empty()){return false;}
         else{
@@ -83,6 +97,9 @@ public class TweeterList {
         }
     }
 
+    /**
+     * calls tweeter's print method if it has 2 or more languages in its array
+     */
     public void getMultilingual(){
         Tweeter t = first;
         while(t != null){
@@ -93,6 +110,10 @@ public class TweeterList {
         }
     }
 
+    /**
+     * @return number of tweeters on the list
+     * @deprecated
+     */
     public int countTweeters(){
         int cont = 0;
         Tweeter aux = first;
