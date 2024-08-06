@@ -1,8 +1,8 @@
 
 public class Cell {
-    int value;
+    Object value;
     Cell next;
-    public Cell(int value){
+    public Cell(Object value){
        this.value = value;
        next = null;
     }
