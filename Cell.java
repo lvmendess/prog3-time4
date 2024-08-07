@@ -1,7 +1,7 @@
 
 public class Cell {
     Object value;
-    Cell next;
+    private Cell next;
 
     public Cell(Object value){
        this.value = value;
