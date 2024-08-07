@@ -10,6 +10,8 @@ public class Main {
         String [] teste = expression.split(" ");
         for (String each:teste){
             System.out.println(each);
+            Tools tool= new Tools();
+            System.out.println(tool.toDouble(each));
         }
 
     }
