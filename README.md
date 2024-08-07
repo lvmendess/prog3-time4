@@ -16,6 +16,4 @@ expressão em notação convencional utilize fila.
 É necessário a utilização dos conceito de OO, Pilha e Fila! Não podemos utilizar estrutura de dados prontas.
 
 ## TAREFAS
-classe Conversion recebe expressão
-método split 
-empilhar 
+classe Conversion recebe expressão, método split, empilhar (DONE; Lívia, Sanzio, Ribas)

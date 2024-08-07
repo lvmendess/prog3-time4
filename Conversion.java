@@ -10,12 +10,21 @@ public class Conversion {
         return teste;
     }
 
-    private Stack pushStack(String stackString){
-        Cell cellForPush = new Cell("");
-        while (stackString.length()>0) {
-            cellForPush.value = stackString.charAt(stackString.length()-1);
+    public Stack pushStack(String stackString){
+        String[] arr = split(stackString);
+        for(int i = 0; i<arr.length; i++){
+            Cell cellForPush = new Cell(arr[i]);
             stack.push(cellForPush);
+            System.out.println(cellForPush.getValue());
         }
+        /*while (stackString.length()>0) {
+            cellForPush.setValue(stackString.charAt(stackString.length()-1));
+            stack.push(cellForPush);
+        }*/
         return stack;
+    }
+
+    public void printStack() throws Exception{
+        stack.print();
     }
 }

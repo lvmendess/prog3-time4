@@ -23,23 +23,23 @@ public class Stack {
             this.stackElements = stackElements;
         }
 
-        public boolean isEmpty( ){
+        public boolean isEmpty(){
             return (top == null);
         }
 
         public void push(Cell element){
-            element.next = top;
+            element.setNext(top);
             top = element;
             stackElements++;
         }
 
-        public void pop()throws Exception{
+        public void pop() throws Exception{
             if(isEmpty( )){
                 throw  new Exception("Error: Stack is empty! ");
             }else{
                 Cell aux = top;
-                top = top.next;
-                aux.next = null;
+                top = top.getNext();
+                aux.setNext(null);
                 stackElements--;
             }
         }
@@ -49,13 +49,13 @@ public class Stack {
         }
 
         public void print() throws Exception{
-            if(isEmpty( ))
+            if(isEmpty())
                 throw  new Exception("Error: Stack is empty! ");
             else{
                 Cell aux = top;
                 while(aux != null){
-                    System.out.println("Element = "+aux.value);
-                    aux = aux.next;
+                    System.out.println("Element = "+aux.getValue());
+                    aux = aux.getNext();
                 }
             }
         }
