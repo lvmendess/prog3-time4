@@ -1,10 +1,14 @@
+public abstract class Cell {
+    protected Cell next;
 
-public class Cell {
-    int value;
-    Cell next;
-    public Cell(int value){
-       this.value = value;
-       next = null;
+    public  Cell getNext(){
+        return this.next;
+    };
+
+    public  void setNext(Cell next){
+        this.next=next;
     }
 
-};
+    
+
+}
