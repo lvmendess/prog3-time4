@@ -1,11 +1,13 @@
 public class Conversion {
-    private Stack stack;
+    private Stack polonaiseStack;
+    private Stack infixStack;
     private Tools tool;
     private Operator operator;
     private Queue queue;
 
     public Conversion(){
-        stack = new Stack();
+        polonaiseStack = new Stack();
+        infixStack = new Stack();
         tool=new Tools();
         queue= new Queue();
         operator=null;
@@ -21,40 +23,36 @@ public class Conversion {
         String[] arr = split(stackExpression);
         Cell caracter;
         for(String each:arr){
-
             if(tool.toDouble(each)!=null){
                 caracter= new Variable(tool.toDouble(each));
             }else{
                 caracter = new Operator(each);
             }
-            stack.push(caracter);
+            polonaiseStack.push(caracter);
         }
-        createInfixExpression(stack.pop());
+        createInfixExpression(polonaiseStack.pop());
+        infixStackToQueue();
     }
 
 
-    public Cell createInfixExpression(Cell n) throws Exception{
-        Cell number;
-//        if(stack.isEmpty()){
-//            return number;
-//        }
+    public void createInfixExpression(Cell n) throws Exception{
         if(n instanceof Variable){
-            return n;
+            infixStack.push(n);
         }else{
-            operator= (Operator)n;
-            queue.add(new Operator("("));
-            number= createInfixExpression(stack.pop());
-            queue.add(((Variable)number));
-            queue.add(operator);
-            number= createInfixExpression(stack.pop());
-            queue.add(((Variable)number));
-            queue.add(new Operator(")"));
+            infixStack.push(new Operator(")")); //inverti logica operadores
+            createInfixExpression(polonaiseStack.pop());
+            infixStack.push(n);
+            createInfixExpression(polonaiseStack.pop());
+            infixStack.push(new Operator("("));  //inverti logica operadores
         }
-        return createInfixExpression(stack.pop());
-
     }
-    public void printStack() throws Exception{
-        stack.print();
+    public void infixStackToQueue() throws Exception{
+       while(!infixStack.isEmpty()){
+           queue.add(infixStack.pop());
+       }
+    }
+    public void print() throws Exception {
         queue.print();
+
     }
 }
