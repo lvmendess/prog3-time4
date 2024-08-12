@@ -9,7 +9,7 @@ public class Main {
         String expression = scanner.nextLine();
     
         c.pushStack(expression.trim());
-        c.printStack();
+        c.print();
 
         scanner.close();
 
