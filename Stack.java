@@ -35,7 +35,7 @@ public class Stack {
 
         public Cell pop() throws Exception{
             if(isEmpty( )){
-                throw  new Exception("Error: Stack is empty! ");
+                throw new Exception("Error: Stack is empty! ");
             }else{
                 Cell aux = top;
                 top = top.getNext();

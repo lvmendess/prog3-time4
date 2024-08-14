@@ -45,4 +45,17 @@ public class Queue {
             }
         }
     }
+
+    public int size(){
+       if(isEmpty()){return 0;}
+       else{
+            Cell aux = front;
+            int cont = 0;
+                while(aux!=null){
+                    cont++;
+                    aux = aux.getNext();
+                }
+            return cont;
+       }
+    }
 }
