@@ -3,7 +3,6 @@ public class Operator extends Cell {
     public Operator(String op) {
         this.op = op;
     }
-    
     public String getOp() {
         return op;
     }

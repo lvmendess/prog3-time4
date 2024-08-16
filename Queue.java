@@ -1,6 +1,6 @@
 public class Queue {
-    Cell front;
-    Cell back;
+    private Cell front;
+    private Cell back;
     public Queue(){
         front = new Variable(-1);
         back=front;
@@ -9,25 +9,12 @@ public class Queue {
     public boolean isEmpty(){
         return(front==back);
     }
+
     public void add(Cell element){
         back.setNext(element);
         back=back.getNext();
         back.setNext(null);
-        //System.out.print(element instanceof Variable?((Variable)element).getVariable():((Operator)element).getOp());
 
-    }
-    public Cell remove() throws Exception{
-        Cell item=null;
-        if(isEmpty()){
-            throw new Exception("Error:queue is empty");
-        }
-        item = front.getNext();
-        front.setNext(item.getNext());
-        item.setNext(null);
-        if(back==item){
-            back=front;
-        }
-        return item;
     }
     public void print(){
         if(isEmpty()){
@@ -44,18 +31,5 @@ public class Queue {
                 
             }
         }
-    }
-
-    public int size(){
-       if(isEmpty()){return 0;}
-       else{
-            Cell aux = front;
-            int cont = 0;
-                while(aux!=null){
-                    cont++;
-                    aux = aux.getNext();
-                }
-            return cont;
-       }
     }
 }
