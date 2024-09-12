@@ -1,32 +1,30 @@
 public class BinaryTree {
-    private Node root;
+    private Word root;
 
     public BinaryTree() {
         this.root = null;
     }
 
-    private Node insertNew(Node newNode, Node current) {
+    private Word insertNew(Word newNode, Word current) {
         if (current == null) {
             return newNode;
         }
-
-        if (current.value.equals(newNode.value)) {
+        if (current.value.compareTo(newNode.value)>0) {
             current.left = insertNew(newNode, current.left);
-        } else {
-            if (current.value != newNode.value) {
-                current.right = insertNew(newNode, current.right);
-                return current;
-            }
+        } else if(current.value.compareTo(newNode.value)<0){
+            current.right = insertNew(newNode, current.right);
+            return current;
+        
         }
 
         return current;
     }
 
-    public void insert(Node newNode) {
+    public void insert(Word newNode) {
         root = insertNew(newNode, root);
     }
     
-    private void preOrder(Node noX) {
+    private void preOrder(Word noX) {
         if (noX != null) {
             System.out.print(noX.value + " ");
             preOrder(noX.left);
@@ -37,7 +35,7 @@ public class BinaryTree {
         preOrder(root);
     }
 
-    private void inOrder(Node noX) {// ALGO ERRADO
+    private void inOrder(Word noX) {// ALGO ERRADO
         if (noX != null) {
             inOrder(noX.left);
             System.out.print(noX.value + " ");
@@ -48,7 +46,7 @@ public class BinaryTree {
         inOrder(root);
     }
 
-    private void postOrder(Node noX) {// ALGO ERRADO
+    private void postOrder(Word noX) {// ALGO ERRADO
         if (noX != null) {
             postOrder(noX.left);
             postOrder(noX.right);
