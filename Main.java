@@ -7,26 +7,26 @@ public class Main {
 
         BinaryTree  tree = new BinaryTree(); 
 
-        Node node = new Node(40);
+        Node node = new Node(A);
         tree.insert(node);
         
 
-        node = new Node(20);
+        node = new Node(B);
         tree.insert(node);
 
-        node = new Node(60);
+        node = new Node(C);
         tree.insert(node);
 
-        node = new Node(10);
+        node = new Node(D);
         tree.insert(node);
 
-        node = new Node(30);
+        node = new Node(E);
         tree.insert(node);
 
-        node = new Node(50);
+        node = new Node(F);
         tree.insert(node);
 
-        node = new Node(70);
+        node = new Node(G);
         tree.insert(node);
 
        // tree.insert(new Node());

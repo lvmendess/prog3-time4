@@ -1,9 +1,9 @@
 public class Node {
-    int value;
+    String value;
     Node left;
     Node right;
 
-    public Node(int value) {
+    public Node(String value) {
         this.value = value;
     }
 }
