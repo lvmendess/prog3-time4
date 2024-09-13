@@ -5,6 +5,17 @@ public class BinaryTree {
         this.root = null;
     }
 
+    /*TODO: conferir se word já existe na árvore - criar método exists(Word w)
+     * se existe: acessar lista de linhas da word presente na árvore e adicionar linha
+     * se não: adicionar word à árvore
+     */
+
+    private Word exists(Word w){
+        Word e = null;
+
+        return e;
+    }
+    
     private Word insertNew(Word newNode, Word current) {
         if (current == null) {
             return newNode;
@@ -14,7 +25,6 @@ public class BinaryTree {
         } else if(current.value.compareTo(newNode.value)<0){
             current.right = insertNew(newNode, current.right);
             return current;
-        
         }
 
         return current;

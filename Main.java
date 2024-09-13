@@ -6,8 +6,8 @@ public class Main {
 
         BinaryTree  tree = new BinaryTree(); 
 
-        Word node = new Word("A");
-        tree.insert(node);
+        /*Word node = new Word("A");
+        tree.insert(node);*/
 
         System.out.print(" Pre Order: ");
         tree.preOrderPublic();
