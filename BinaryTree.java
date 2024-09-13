@@ -47,7 +47,14 @@ public class BinaryTree {
     }
 
     public void insert(Word newNode) {
-        root = insertNew(newNode, root);
+        Word w = exists(newNode);
+        if (w == null){
+            root = insertNew(newNode, root);
+        } 
+        else {
+            w.addLineAtList(newNode.getLines());
+        }
+        
     }
     
     private void preOrder(Word noX) {
@@ -61,18 +68,19 @@ public class BinaryTree {
         preOrder(root);
     }
 
-    private void inOrder(Word noX) {// ALGO ERRADO
+    private void inOrder(Word noX) {
         if (noX != null) {
             inOrder(noX.left);
             System.out.print(noX.value + " ");
             inOrder(noX.right);
         }
     }
+
     public void inOrderPublic(){
         inOrder(root);
     }
 
-    private void postOrder(Word noX) {// ALGO ERRADO
+    private void postOrder(Word noX) {
         if (noX != null) {
             postOrder(noX.left);
             postOrder(noX.right);
@@ -81,5 +89,17 @@ public class BinaryTree {
     }
     public void postOrderPublic(){
         postOrder(root);
+    }
+
+    private void printAll(Word noX){
+        if (noX != null) {
+            printAll(noX.left);
+            System.out.print(noX.value + " " + noX.wordLines.printAll() + '\n');
+            printAll(noX.right);
+        }
+    }
+
+    public void print(){
+        printAll(root);
     }
 }
