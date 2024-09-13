@@ -1,11 +1,14 @@
 public class ListaSEL {
     private Lines first;
+
     public ListaSEL(){
         first=null;
     }
+
     private boolean empty(){
         return first==null;
     }
+    
     public void insert(Lines l){
         if(empty()){
             insertAtStart(l);
@@ -48,6 +51,29 @@ public class ListaSEL {
             }
             aux.next=l;
         }
+    }
+
+    public String printAll(){
+        String resultLine = null;
+        Lines aux = first;
+        if (first == null){
+            return resultLine;
+        }else{
+            while (aux != null) {
+                if (aux == first){
+                    resultLine = String.valueOf(aux.line);        
+                }
+                else{
+                    resultLine += ", " + aux.line;
+                }
+                aux = aux.next; 
+            }
+            return resultLine;
+        }
+    }
+
+    public int getSingleLine(){
+        return first.getLine();
     }
 }
 
