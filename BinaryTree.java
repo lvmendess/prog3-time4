@@ -1,118 +1,191 @@
+
+/**
+ * Uma classe para representar uma árvore binária de palavras.
+ */
 public class BinaryTree {
+
+    /**
+     * A raiz da árvore binária.
+     */
     private Word root;
 
+    /**
+     * Construtor padrão.
+     */
     public BinaryTree() {
         this.root = null;
     }
 
-    /*TODO: conferir se word já existe na árvore 
-        - criar método exists(Word w) - DONE
-        - adicionar verificação de existência (chamar método exists()) ao método de inserção - TO-DO
-            * se existe: acessar lista de linhas da word presente na árvore e adicionar linha
-            * se não: adicionar word à árvore
+    /**
+     * Verifica se uma palavra já existe na árvore.
+     *
+     * @param w a palavra a ser verificada
+     * @return a palavra encontrada na árvore, ou null se não existir
      */
-
-    public Word exists(Word w){
+    public Word exists(Word w) {
         return wordExists(w, root);
     }
 
-    private Word wordExists(Word w, Word current){ //testar, não sei se funciona
-        if(current==null){ //se chegar em nó terminal/folha
+    /**
+     * Método auxiliar para verificar se uma palavra existe na árvore.
+     *
+     * @param w a palavra a ser verificada
+     * @param current o nó atual da árvore
+     * @return a palavra encontrada na árvore, ou null se não existir
+     */
+    private Word wordExists(Word w, Word current) {
+        if (current == null) {
             return null;
-        }else if(current.value.equals(w.value)){ //palavra à inserir é igual à raiz
+        } else if (current.getValue().equals(w.getValue())) {
             return current;
-        }else{
-            if(current.value.compareTo(w.value)>0){//procura na sub-árvore esquerda
-                return wordExists(w, current.left);
-            }else if(current.value.compareTo(w.value)<0){//procura na sub-árvore direita
-                return wordExists(w, current.right);
-            }else{
+        } else {
+            if (current.getValue().compareTo(w.getValue()) > 0) {
+                return wordExists(w, current.getLeft());
+            } else if (current.getValue().compareTo(w.getValue()) < 0) {
+                return wordExists(w, current.getRight());
+            } else {
                 return null;
             }
         }
     }
-    
+    /**
+     * Método auxiliar para inserir uma nova palavra na árvore.
+     * 
+     * @param newNode a palavra a ser inserida
+     * @param current o nó atual da árvore
+     * @return o nó atualizado da árvore
+     */
     private Word insertNew(Word newNode, Word current) {
         if (current == null) {
             return newNode;
         }
-        if (current.value.compareTo(newNode.value)>0) {
-            current.left = insertNew(newNode, current.left);
-        } else if(current.value.compareTo(newNode.value)<0){
-            current.right = insertNew(newNode, current.right);
+        if (current.getValue().compareTo(newNode.getValue()) > 0) {
+            current.setLeft(insertNew(newNode, current.getLeft()));
+        } else if (current.getValue().compareTo(newNode.getValue()) < 0) {
+            current.setRight(insertNew(newNode, current.getRight()));
             return current;
         }
 
         return current;
     }
 
+
+    /**
+     * Insere uma nova palavra na árvore.
+     *
+     * @param newNode a palavra a ser inserida
+     */
     public void insert(Word newNode) {
         Word w = exists(newNode);
-        if (w == null){
+        if (w == null) {
             root = insertNew(newNode, root);
-        } 
-        else {
+        } else {
             w.addLineAtList(newNode.getLines());
         }
-        
+
     }
-    
+
+    /**
+     * Método auxiliar private (usado pelo preOrderPublic()) para percorrer em pré-ordem na árvore.Usa recursividade.
+     * 
+     * @param noX o nó atual da árvore
+     */
     private void preOrder(Word noX) {
         if (noX != null) {
-            System.out.print(noX.value + " ");
-            preOrder(noX.left);
-            preOrder(noX.right);
+            System.out.print(noX.getValue() + " ");
+            preOrder(noX.getLeft());
+            preOrder(noX.getRight());
         }
     }
-    public void preOrderPublic(){
+
+    /**
+     * Percorre em pré-ordem na árvore e imprime os valores das palavras em pré-ordem.
+     */
+    public void preOrderPublic() {
         preOrder(root);
     }
 
+    /**
+     * Método auxiliar private (usado pelo inOrderPublic()) para percorrer em ordem na árvore. Usa recursividade.
+     * 
+     * @param noX o nó atual da árvore
+     */
     private void inOrder(Word noX) {
         if (noX != null) {
-            inOrder(noX.left);
-            System.out.print(noX.value + " ");
-            inOrder(noX.right);
+            inOrder(noX.getLeft());
+            System.out.print(noX.getValue() + " ");
+            inOrder(noX.getRight());
         }
     }
 
-    public void inOrderPublic(){
+    /**
+     * Percorre em ordem na árvore e imprime os valores das palavras.
+     */
+    public void inOrderPublic() {
         inOrder(root);
     }
 
+    /**
+     * Método auxiliar private (usado pelo postOrderPublic()) para percorrer em pós-ordem na árvore.Usa recursividade.
+     * 
+     * @param noX o nó atual da árvore
+     */
     private void postOrder(Word noX) {
         if (noX != null) {
-            postOrder(noX.left);
-            postOrder(noX.right);
-            System.out.print(noX.value + " ");
+            postOrder(noX.getLeft());
+            postOrder(noX.getRight());
+            System.out.print(noX.getValue() + " ");
         }
     }
-    public void postOrderPublic(){
+
+    /**
+     * Percorre em pós-ordem na árvore e imprime os valores das palavras.
+     */
+    public void postOrderPublic() {
         postOrder(root);
     }
 
-    private void printAll(Word noX){
+    /**
+     * Método auxiliar private (usado pelo print()) para imprimir todas as palavras da árvore, junto com suas linhas.  Usa recursividade.
+     * 
+     * @param noX o nó atual da árvore
+     */
+    private void printAll(Word noX) {
         if (noX != null) {
-            printAll(noX.left);
-            System.out.print(noX.value + " " + noX.wordLines.printAll() + '\n');
-            printAll(noX.right);
+            printAll(noX.getLeft());
+            System.out.print(noX.getValue() + " " + noX.getWordLines().printAll() + '\n');
+            printAll(noX.getRight());
         }
     }
 
-    public void print(){
+    /**
+     * Imprime todas as palavras da árvore, junto com suas linhas.
+     */
+    public void print() {
         printAll(root);
     }
+
+    /**
+     * Constrói uma string representando a árvore binária. Usa recursividade para percorrer os nós.
+     * 
+     * @param node o nó atual da árvore
+     * @return a string representando a árvore binária
+     */
     public String buildString(Word node) {
         if (node == null) {
             return "";
         }
-        String leftString = buildString(node.left);
-        String currentString = node.value + " " + node.wordLines.printAll() + "\n";
-        String rightString = buildString(node.right);
+        String leftString = buildString(node.getLeft());
+        String currentString = node.getValue() + " " + node.getWordLines().printAll() + "\n";
+        String rightString = buildString(node.getRight());
         return leftString + currentString + rightString;
     }
-    
-    
+
+    /**
+     * Retorna a raiz da árvore binária.
+     * 
+     * @return a raiz da árvore binária
+     */
     public Word getRoot() {
         return root;
     }
