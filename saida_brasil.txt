@@ -1,0 +1,147 @@
+a 14, 18, 20, 33, 37, 48, 49, 50
+adora 50
+adorada 25, 51
+amada 16, 27, 29, 42, 53, 55
+america 34
+amor 18, 43
+amores 40
+ao 33, 35
+as 6
+belo 23
+berco 32
+bosques 39
+braco 12
+brado 7
+brasil 17, 26, 30, 34, 43, 52, 56
+brasileiro 1
+brilhou 9
+campos 38
+ceu 9, 19, 33
+clava 48
+colosso 23
+com 12
+conquistar 12
+conseguimos 12
+cruzeiro 20
+da 3, 8, 9, 34, 48
+de 3, 4, 7, 18, 18, 43
+deitado 32
+desafia 14
+desce 18
+dessa 11
+desta 45
+deste 28, 54
+diga 45
+do 6, 20, 33, 33, 35, 37
+dos 28, 54
+duque 4
+e 8, 18, 19, 24, 33, 45
+em 8, 13, 19, 32
+entre 26, 52
+ergues 48
+es 23, 23, 26, 28, 52, 54
+espelha 24
+esperanca 18
+esplendido 32
+essa 24
+estrada 4
+estrelado 44
+eternamente 32
+eterno 43
+filho 49
+filhos 28, 54
+flamula 45
+florao 34
+flores 38
+foge 49
+formoso 19
+forte 12, 23, 48
+francisco 3
+fulgidos 8
+fulguras 34
+futuro 24
+garrida 37
+gentil 28, 54
+gigante 22
+grandeza 24
+heroico 7
+hino 1
+idolatrada 16, 42
+igualdade 11
+iluminado 35
+imagem 20
+impavido 23
+instante 9
+intenso 17
+ipiranga 6
+joaquim 4
+justica 48
+labaro 44
+letra 4
+liberdade 8, 13
+limpido 19
+luta 49
+luz 33
+mae 28, 54
+mais 37, 38, 39, 40
+manuel 3
+mar 33
+margens 6
+mas 48
+mil 26, 52
+morte 14, 50
+mundo 35
+musica 3
+nacional 1
+nao 49
+natureza 22
+nem 50
+nesse 9
+no 9, 40
+nossa 40
+nosso 14
+nossos 39
+novo 35
+o 7, 8, 11, 13, 14, 16, 24, 27, 34, 42, 44, 45, 53
+osorio 4
+ostentas 44
+outras 26, 52
+ouviram 6
+patria 9, 16, 27, 29, 42, 53, 55
+peito 14
+pela 22
+penhor 11
+placidas 6
+povo 7
+profundo 33
+propria 14, 22, 50
+que 37, 44, 49
+quem 50
+raio 17
+raios 8
+resplandece 20
+retumbante 7
+risonho 19
+risonhoslindos 38
+salve 16, 16, 42, 42
+se 11, 19, 48
+seio 13, 40
+seja 43
+silva 3
+simbolo 43
+sol 8, 35
+solo 28, 54
+som 33
+sonho 17
+te 50
+tem 38, 39
+teme 50
+terra 18, 25, 37, 51
+teu 13, 19, 24, 40, 49
+teus 38
+tu 26, 52
+um 7, 17, 17, 49
+veras 49
+verdelouro 45
+vida 39, 40
+vivido 17

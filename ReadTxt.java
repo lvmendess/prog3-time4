@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.text.Normalizer;
 
 public class ReadTxt{
 
@@ -21,11 +22,18 @@ public class ReadTxt{
         }
     }
 
+    public static String[] removerAcentoseCaracteres(String[] strs) {
+        String[] result = new String[strs.length];
+        for (int i = 0; i < strs.length; i++) {
+            result[i] = Normalizer.normalize(strs[i], Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "").replace("\"", "").replace(",","").replace("!","").replace(".","").replace(":","").replace("'", "").replace("`", "").replace("-","").replace(")", "").replace("(", "");
+        }
+        return result;
+    }
     public void DivideLine(String line, int lineNum, BinaryTree t) {
-        String [] fields = line.replace("\"", "").replace(",","").replace("!","").replace(".","").replace(":","").replace("-","").split(" ");
-        for(int i=0; i<fields.length; i++){
-            if(!fields[0].equals("")){
-                Word word = new Word(fields[i], lineNum);
+        String [] fields = removerAcentoseCaracteres(line.split(" "));
+        for (String field : fields) {
+            if (!fields[0].equals("")) {
+                Word word = new Word(field, lineNum);
                 t.insert(word);
             }
         }

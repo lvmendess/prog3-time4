@@ -1,0 +1,490 @@
+22 147, 203, 212
+a 23, 30, 33, 38, 42, 47, 51, 65, 73, 81, 85, 103, 124, 126, 127, 149, 150, 153, 158, 158, 160, 179, 180, 180, 188, 192, 194, 199, 203, 204, 212, 219
+acabar 145
+acabo 173
+acabou 79
+aceitou 45
+acertou 187
+achar 32
+acontece 142
+acreditava 219
+agora 92
+ai 77
+ainda 11
+ajudar 68, 225
+ali 18, 194
+alimentar 66
+alta 108, 219
+altar 16
+amanha 169
+amar 104
+amigos 81
+amor 175
+ano 51
+antes 122
+ao 170
+aos 26, 27
+apareceu 143
+apertar 158
+aplaudir 192
+aprendeu 13
+aprendiz 52
+aquela 175
+aqui 43, 197, 199
+aquilo 18
+arma 149, 204
+armar 138
+armas 172
+arrependeu 98, 214
+as 16, 21, 25, 48, 67, 129, 169, 172, 182, 191
+asa 81
+ascendente 120
+assistir 184
+ate 13, 58, 65, 197
+atirar 148
+atirava 186
+atiro 207
+atras 117
+aumentou 28
+bagulho 77
+banca 112
+bandeirinhas 191
+bandido 10, 92, 213
+bastardo 58
+bebedeira 134
+bestificado 47
+bisavo 58
+boiadeiro 36, 37
+bolivia 60, 139
+bom 77
+bomba 112
+boto 112
+boyzinhos 84
+brasilia 40, 223
+brigar 150
+brincar 26
+brinque 120
+burgesia 219
+ca 208
+caboclo 1
+cafezinho 35
+caixinha 16
+cameras 194
+cansado 32
+cao 129
+capitao 95
+carpinteiro 52, 103
+casa 119, 157, 162
+casar 102, 160
+casou 164
+catorze 170
+causa 31
+cegou 201
+ceilandia 169
+cem 53
+central 46
+cercania 12
+certo 131
+chamou 168
+chegando 35, 162
+chorou 162
+cidade 25, 47, 55, 75, 84, 219
+cinco 213
+circo 199
+classe 31, 108
+coisa 206
+coisas 21, 61
+colegio 113
+colocavam 16
+com 11, 13, 36, 47, 79, 105, 108, 117, 120, 122, 137, 145, 164, 173, 212, 215, 223, 224
+comecar 63, 73
+comecasse 150
+comeco 51
+comecou 85, 158, 188
+comia 25
+como 30, 71, 129
+comprou 33
+conheceu 97
+conhecia 57
+conseguiu 222
+consequencias 129
+contrabando 139
+conversa 70
+cor 31
+coracao 100, 128
+corpo 89
+cortar 52
+costas 186, 207
+crente 155
+crianca 10, 113, 196
+cristo 5, 65, 78, 92, 100, 131, 140, 144, 148, 157, 167, 177, 187, 212, 217
+crucificado 73
+cu 117
+da 7, 12, 25, 31, 48, 55, 75, 76, 84, 117, 119, 134, 139, 178, 194, 208, 209, 219, 220
+dali 79
+danca 198
+dancar 153
+dancou 87
+dava 66
+de 5, 11, 23, 26, 26, 28, 32, 48, 52, 56, 61, 78, 82, 83, 94, 98, 108, 110, 112, 113, 116, 120, 122, 142, 143, 144, 160, 196, 197, 198, 217
+decidiu 71, 145, 149, 198
+declarava 217
+deixou 7
+dele 100
+demora 183
+dentro 167
+depois 149, 214
+descobriu 135
+descriminacao 31
+destemido 93
+desvirginava 154
+deu 8, 204, 213
+dez 116
+dia 108
+diabo 223
+diante 28
+diferente 17
+dinheiro 15, 22, 56, 66, 108, 138
+direto 33
+disse 123
+distrito 93
+diz 110
+dizendo 180
+dizia 40, 62, 68, 102, 155
+diziam 6
+do 16, 58, 89, 179
+dos 84, 144
+doze 26
+duas 169, 182
+duelo 168, 179
+e 13, 21, 23, 31, 33, 35, 36, 37, 43, 45, 46, 57, 61, 62, 65, 67, 71, 73, 78, 79, 88, 89, 93, 98, 100, 103, 105, 108, 109, 110, 113, 116, 119, 119, 131, 133, 134, 138, 140, 145, 148, 149, 153, 155, 157, 158, 163, 165, 168, 170, 172, 174, 177, 180, 187, 188, 192, 193, 194, 194, 196, 197, 198, 201, 202, 206, 210, 212, 215, 219, 222
+ela 100, 203
+elaborou 72
+ele 6, 13, 20, 21, 40, 47, 62, 63, 66, 70, 71, 87, 88, 98, 102, 103, 109, 133, 145, 162, 163, 165, 168, 202, 220, 224
+em 10, 53, 112, 113, 135, 140, 160, 162, 170
+embebedou 134
+embora 159
+encontrou 36
+entao 162, 168, 182, 202
+entar 198
+entendia 30
+entrar 128
+entrou 46
+era 6, 12, 17, 18, 26, 62, 92, 99, 132, 155, 167, 196, 218, 224
+escola 13
+escolha 23
+escolher 172
+escolheu 23
+escorpiao 120
+espera 110
+essa 225
+essas 128
+esta 160
+estava 131
+estou 40, 199
+estrelas 116
+estupro 89
+eu 43, 51, 90, 104, 105, 114, 129, 159, 159, 170, 173, 206, 207
+faco 114
+falar 36, 224
+falou 137
+falsa 175
+faroeste 1
+faz 109, 225
+fazenda 7
+fazer 177
+federal 93
+feira 55
+festa 82
+fez 81, 153, 165
+fica 117
+fico 43
+ficou 32, 47, 78, 144
+filha 42, 208
+filho 105, 165
+filmava 194
+foi 27, 33, 35, 36, 38, 55, 73, 88, 97, 133, 163, 184
+frente 170
+frequentava 81
+funcionava 30
+futuro 132
+ganhava 53
+garganta 190
+gastar 56
+general 95, 116
+gente 57, 160, 194, 225
+ha 41, 157
+historia 219
+homem 186, 206
+hora 180
+horas 67, 169, 182
+ia 15, 38, 63, 68, 71, 82, 145, 157
+igreja 15
+incerto 132
+indecorosa 109
+indo 40
+inferno 88, 163
+influencia 84
+inocentes 154
+interessante 57
+irmao 124, 126, 127
+isso 114
+ja 87, 148, 160
+jeremias 142, 150, 152, 164, 168, 206
+jesus 8
+joao 5, 38, 45, 78, 110, 145, 191, 215, 217, 222
+jornal 112
+junto 215
+juntou 22
+jurei 175
+la 35, 61, 143, 170, 184
+legiao 3
+lembrou 196
+lhe 8, 38, 204
+libertar 82
+linda 99
+local 180
+logo 75, 75
+lote 170
+lucia 99, 104, 159, 164, 174, 202, 214
+lugar 18, 41, 43, 135
+luzes 48
+ma 84
+maconheiro 152
+madeira 52
+mais 11, 70, 72
+maluco 75
+mandado 27
+mao 108, 117
+mar 20
+marasmo 7
+maria 99, 104, 159, 164, 174, 202, 214
+mas 38, 66, 70, 83, 122, 142, 147, 155
+mato 174
+me 159
+medico 26
+medo 5, 94
+meio 134
+melhor 41, 119
+menina 97, 99, 175
+menininhas 25
+mes 53
+mesa 117
+mesmo 17, 17
+meu 43, 124, 126, 127, 175, 209
+mil 53
+minha 42, 119
+ministro 68
+mocinhas 154
+morava 12
+morrer 218
+morreu 11, 215
+morte 65
+muita 57
+muitas 61
+muito 157
+mundo 153
+na 13, 16, 21, 55, 60, 108, 108, 117, 169, 179, 190, 219
+nao 5, 18, 30, 41, 66, 70, 94, 112, 114, 114, 116, 131, 133, 155, 157, 177, 206, 207, 207, 219, 222
+naquela 198
+natal 48
+negocio 63
+nela 165
+nem 113
+nenhum 94
+nesse 41
+neto 58
+nisso 201
+no 8, 43, 46, 51, 87, 93, 122, 128, 134, 182, 209, 213
+nome 62
+norte 81
+noticia 179
+noticiario 67
+novidade 76
+novo 51
+num 46
+nunca 120
+o 5, 6, 7, 8, 11, 12, 13, 15, 18, 20, 37, 56, 66, 67, 100, 100, 107, 117, 119, 123, 131, 139, 168, 175, 177, 178, 180, 183, 187, 190, 192, 197, 201, 210, 217, 222, 223, 224
+odio 8, 28, 122, 167
+olha 208
+olhada 209
+olhar 122
+olhos 201
+olhou 191, 193
+onde 12, 28
+onibus 46
+organizou 153
+os 75, 79, 98
+ou 95, 95
+outro 135
+ouvia 67
+pablo 62, 71, 137, 139, 147, 204
+pai 11
+pais 41
+palavras 128
+para 20, 22
+parceiro 137
+passa 107
+passagem 33, 37
+pecados 98
+pegar 90
+peixe 120
+pela 88, 163
+pelas 186, 207
+pensava 10
+perdao 210
+perder 38
+perdeu 6, 124, 126, 127
+peruano 60
+planaltina 140
+planalto 46
+plano 72
+planos 144
+plantacao 73
+playboy 95
+pode 172
+poder 22
+policia 94
+por 31, 53, 143
+porco 173
+porque 218
+porta 108
+povo 183, 192, 217
+pra 7, 8, 15, 15, 40, 55, 66, 82, 82, 88, 100, 104, 157, 163, 168, 170, 175, 184, 208, 223, 225
+pras 194
+precisando 42
+presidente 224
+primeira 88
+primeiro 87
+primo 204
+pro 27, 167, 193
+professor 13, 26
+prometeu 100
+proposta 45, 109
+propria 23
+protejo 116
+protetor 215
+puta 208
+quando 6, 10, 11, 97, 178, 196, 223
+que 6, 8, 16, 17, 18, 21, 60, 63, 68, 68, 71, 102, 110, 117, 131, 135, 137, 138, 142, 145, 150, 155, 170, 173, 175, 177, 179, 186, 194, 197, 204, 206, 217, 220, 222, 225
+quem 36
+queria 20, 70, 102, 137, 138, 222, 224
+quero 105
+quinze 27
+rapaz 56
+razao 180
+reconheceu 202
+reformatorio 27
+renome 143
+repente 83
+reporter 178
+resposta 32, 110, 110
+revendia 140
+rezar 155
+rico 78
+rock 82
+roconha 153
+rodoviaria 48
+roubar 15, 85
+roubo 87
+sabado 182
+sabendo 144
+sabia 148, 155, 177, 218
+saindo 48
+sair 20, 119, 122
+salvador 33
+salvar 38
+sangue 8, 190, 209
+santo 5, 65, 72, 78, 92, 100, 131, 140, 144, 148, 157, 167, 177, 187, 212, 217, 218
+saudade 158
+se 6, 66, 71, 82, 98, 102, 134, 138, 160, 164, 196, 199, 214
+segunda 163
+sem 73, 152, 183, 208
+sempre 68, 104
+senhor 108, 119
+sentia 17, 18
+sentindo 190
+sentir 8, 210
+ser 10, 73, 103
+sete 67
+seu 8, 18, 28, 56, 58, 62, 68, 72, 89, 132, 135, 173, 204, 215
+seus 98, 201
+sexta 55
+so 8, 10, 15, 149, 167, 184, 225
+sob 84
+sofrer 129, 227
+sol 201
+soldado 11
+solidao 23
+sorrir 188
+sorveteiro 193
+sou 206
+souberam 76
+sua 31, 31, 45, 124, 126, 127
+suas 172
+taguatinga 53
+tal 5, 142
+tambem 138, 174
+tanto 26, 28
+te 104
+televisao 21, 178
+tem 77
+temido 93
+tempo 107, 160
+tentar 32
+ter 105, 223
+terror 12, 28
+teu 210
+tinha 5, 37, 94, 135, 138
+tiro 11
+tiros 213
+to 42
+toda 225
+todas 25
+todo 7, 56, 153, 183
+todos 6, 79, 98
+tomar 35
+trabalhador 56
+trabalhando 135
+trabalhar 51, 133
+trabalhava 65
+traficante 95, 143
+traficantes 79
+traidor 173, 213
+tras 7
+trazia 61, 139, 203
+trouxe 147
+tudo 194, 197
+tv 179, 194, 220
+um 35, 36, 58, 60, 63, 84, 105, 108, 108, 120, 129, 137, 142, 165, 168, 186
+uma 33, 37, 72, 97, 99, 109, 110, 110, 147, 196, 209
+urbana 3
+usar 149
+vai 43
+vao 90, 128
+veio 223
+velhinhas 16
+velho 123
+vem 108, 210
+ver 20, 90, 159
+vergonha 152, 208
+vez 72, 88, 163, 198
+via 21
+viacrucis 199
+viagem 38
+viajar 22
+vida 30, 124, 126, 127
+violencia 89
+viram 220
+virar 71
+virou 199
+visitar 42
+viu 48, 178
+viveu 197
+vivia 60
+voce 43, 105, 124, 126, 127, 172, 173, 206
+voces 90, 90
+voltou 103
+vou 90, 104, 129, 159, 159, 170
+winchester 147, 203, 212
+zona 55
