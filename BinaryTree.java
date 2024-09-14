@@ -102,4 +102,18 @@ public class BinaryTree {
     public void print(){
         printAll(root);
     }
+    public String buildString(Word node) {
+        if (node == null) {
+            return "";
+        }
+        String leftString = buildString(node.left);
+        String currentString = node.value + " " + node.wordLines.printAll() + "\n";
+        String rightString = buildString(node.right);
+        return leftString + currentString + rightString;
+    }
+    
+    
+    public Word getRoot() {
+        return root;
+    }
 }
