@@ -36,7 +36,7 @@ Decidi manter as duplas que foram utilizadas no tp4, dividi as tarefas da seguin
 
 ## Autores
 
-- [@pedrogribas](https://www.github.com/octokatherine)
+- [@pedrogribas](https://www.github.com/pedrogribas)
 - [@lvmendess](https://www.github.com/lvmendess)
 - [@luisads4](https://www.github.com/luisads4)
 - [@phsanzio](https://www.github.com/phsanzio)
