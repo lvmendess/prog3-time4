@@ -2,7 +2,7 @@
 /**
  * Uma classe para representar uma árvore binária de palavras.
  */
-public class BinaryTree {
+public class BalancedBinaryTree {
 
     /**
      * A raiz da árvore binária.
@@ -12,7 +12,7 @@ public class BinaryTree {
     /**
      * Construtor padrão.
      */
-    public BinaryTree() {
+    public BalancedBinaryTree() {
         this.root = null;
     }
 

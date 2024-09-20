@@ -1,30 +1,38 @@
-# TP4: Árvore Binária
+# TP5: Árvore Binária Balanceada
 
 ## Lembretes:
 
-- Comando para clonar esta branch: `git clone --single-branch --branch tp4-binary-tree https://github.com/lvmendess/prog3-time4/`
-- Caso queira modificar um arquivo da branch, crie uma branch separada com seu nome e realize um pull request dos arquivos modificados. :)
+- Comando para clonar esta branch: `git clone --single-branch --branch tp5-binary-tree-balanced https://github.com/lvmendess/prog3-time4/`
+- Caso queira modificar um arquivo da branch, crie uma branch separada com seu nome e realize um pull request dos arquivos modificados. :))
 
 ## O que fazer?
 
-consiste em implementar uma Árvore de Pesquisa sem Balanceamento, onde cada nodo irá armazenar uma palavra e uma lista de números das linhas onde ela aparece (use o TAD Lista para isso). A medida que as palavra são lidas, o seu algoritmo deve pesquisar a árvore para ver se a palavra já está presente. Se estiver, adiciona o novo número de linha à lista dessa palavra. Se não estiver presente, cria um novo nodo na árvore e inicia a lista de linhas com esta. O uso da árvore de pesquisa é indicado pois a sua estrutura será bastante dinâmica e no final você precisará imprimir as palavras em ordem alfabética.
-## Dicas
-
-Use os métodos de árvore nos slides.
+O trabalho consiste em implementar a árvore que criamos no tp4 de forma balanceada.
 
 ## Observações!
 
-É necessária a utilização dos conceitos de Árvore Binária! Não podemos utilizar estruturas de dados prontas.
+É necessária a utilização dos conceitos de Árvore Binária e Balanceamento de árvore! Não podemos utilizar estruturas de dados prontas.
 
 ## Tarefas
 
-Organizei as tarefas em duplas. Após perceber desenvolvimento maior de alguns alunos e menos de outros do grupo. Dividi duplas em revisor -> programador. Onde o revisor solicita, depois lê o código do programador, avalia e faz alterações necessárias (evitando o máximo possivel programar).
+Decidi manter as duplas que foram utilizadas no tp4, dividi as tarefas da seguinte forma:
 
-As duplas e as tarefas para cada foram: (Revisor / Programador respectivamente)
+1- Criar método que calcula altura dos nós; Pedro Ribas e Pedro José
 
-- Lívia Mendes e Pedro Sanzio: Lógica de insert de palavras na árvore e print no console;
-- Duda e Luísa: Criação das classes de estrutura e adaptação (BinaryTree, ListaSEL, Lines);
-- Pedro Ribas e Pedro José: Criação do ReadTxt e conversão do resultado final em txt;
+2- Criar método que verifica o balanceamento de cada nó; Pedro Ribas e Pedro José
+
+3- Criar método de Rotação LL (direita simples); Lívia Mendes e Pedro Sanzio
+
+4- Criar método de Rotação RR (esquerda simples); Duda e Luísa
+
+5- Criar método de Rotação LR (esquerda-direita-dupla); Lívia Mendes e Pedro Sanzio
+
+6- Criar método de Rotação RL (direita-esquerda-dupla); Pedro Ribas e Pedro José
+
+7- Criar método que verifica os fatores de balanceamento e chama o método de rotação correto;  Duda e Luísa
+
+8- Ajustar método de inserção para garantir que a árvore esteja reequilibrada após cada inserção; Lívia Mendes e Pedro Sanzio
+
 
 ## Autores
 
@@ -33,6 +41,7 @@ As duplas e as tarefas para cada foram: (Revisor / Programador respectivamente)
 - [@luisads4](https://www.github.com/luisads4)
 - [@phsanzio](https://www.github.com/phsanzio)
 - [@PedroHL19](https://www.github.com/PedroHL19)
+- [@DudaMatiasS ](https://github.com/DudaMatiasS)
 
 
 ## Uso

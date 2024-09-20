@@ -15,7 +15,7 @@ public class ReadTxt{
      * @param filepath o caminho para o arquivo de texto
      * @param t a árvore binária para inserir as palavras
      */
-    public void read(String filepath, BinaryTree t){
+    public void read(String filepath, BalancedBinaryTree t){
         try{
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
             String line;
@@ -51,7 +51,7 @@ public class ReadTxt{
      * @param lineNum o número da linha no arquivo
      * @param t a árvore binária para inserir as palavras
      */
-    public void DivideLine(String line, int lineNum, BinaryTree t) {
+    public void DivideLine(String line, int lineNum, BalancedBinaryTree t) {
         String [] fields = removeAccentsAndCharacters(line.split(" "));
         for (String field : fields) {
             if (!fields[0].equals("")) {

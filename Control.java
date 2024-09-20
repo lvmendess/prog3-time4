@@ -12,7 +12,7 @@ public class Control {
     /**
      * Árvore binária.
      */
-    BinaryTree tree;
+    BalancedBinaryTree tree;
 
     /**
      * Construtor da classe Control.  Inicializa o leitor de arquivos e a árvore binária. 
@@ -20,7 +20,7 @@ public class Control {
      */
     public Control() {
         leitor = new ReadTxt();
-        tree = new BinaryTree();
+        tree = new BalancedBinaryTree();
     }
 
     /**
@@ -61,7 +61,7 @@ public class Control {
      * @param tree árvore a ser convertida
      * @return string representando a árvore
      */
-    private String treeToString(BinaryTree tree) {
+    private String treeToString(BalancedBinaryTree tree) {
         return tree.buildString(tree.getRoot());
     }
 }
