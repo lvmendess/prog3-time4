@@ -69,11 +69,11 @@ public class BalancedBinaryTree {
         if (current == null) {
             return height; // Se o nó for null, retorna a altura acumulada
         }
-        // Caso base: se o nó atual é uma folha
+        //se o nó atual é uma folha
         if (current.getLeft() == null && current.getRight() == null) {
-            return height + 1; // A altura da folha é altura + 1
+            return height + 1;
         }
-        // Recursão para os filhos
+        // Recursão para os filhos esquerda e direita
         int leftHeight = calculateHeight(current.getLeft(), height + 1);
         int rightHeight = calculateHeight(current.getRight(), height + 1);
         // Retorna a maior altura entre as subárvores esquerda e direita
@@ -100,7 +100,7 @@ public class BalancedBinaryTree {
      */
     private boolean checkBalancing(Word current) {
         if (current == null) {
-            return true; // Uma árvore vazia é balanceada
+            return true;
         }
 
         int leftHeight = calculateHeight(current.getLeft(), 0);
