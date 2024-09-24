@@ -29,7 +29,7 @@ public class BalancedBinaryTree {
     /**
      * Método auxiliar para verificar se uma palavra existe na árvore.
      *
-     * @param w a palavra a ser verificada
+     * @param w       a palavra a ser verificada
      * @param current o nó atual da árvore
      * @return a palavra encontrada na árvore, ou null se não existir
      */
@@ -48,6 +48,72 @@ public class BalancedBinaryTree {
             }
         }
     }
+    /**
+     * Método para calcular altura na árvore.
+     * 
+     * @return a altura da árvore
+     */
+    public int altura() {
+        return calculateHeight(root, 0);
+    }
+
+
+    /**
+     * Método auxiliar para calcular altura. Usa recursividade
+     * 
+     * @param atual  a palavra que está percorrendo
+     * @param altura encontrada até então
+     * @return a altura final
+     */
+    private int calculateHeight(Word current, int height) {
+        if (current == null) {
+            return height; // Se o nó for null, retorna a altura acumulada
+        }
+        //se o nó atual é uma folha
+        if (current.getLeft() == null && current.getRight() == null) {
+            return height + 1;
+        }
+        // Recursão para os filhos esquerda e direita
+        int leftHeight = calculateHeight(current.getLeft(), height + 1);
+        int rightHeight = calculateHeight(current.getRight(), height + 1);
+        // Retorna a maior altura entre as subárvores esquerda e direita
+        return Math.max(leftHeight, rightHeight);
+    }
+
+
+    /**
+     * Verifica se a árvore a partir da raiz fornecida é balanceada.
+     *
+     * @param raiz O nó raiz da árvore.
+     * @return true se a árvore é balanceada, false caso contrário.
+     */
+    public boolean isBalanced() {
+        return checkBalancing(root);
+    }
+
+    /**
+     * /**
+     * Verifica se a árvore binária é balanceada. Método auxiliar recursivo
+     *
+     * @param atual O nó atual da árvore.
+     * @return true se a árvore é balanceada, false caso contrário.
+     */
+    private boolean checkBalancing(Word current) {
+        if (current == null) {
+            return true;
+        }
+
+        int leftHeight = calculateHeight(current.getLeft(), 0);
+        int rightHeight = calculateHeight(current.getRight(), 0);
+
+        if (Math.abs(rightHeight - leftHeight) > 1) {
+            return false; // Se a diferença de altura for maior que 1, não está balanceada
+        }
+
+        // Verifica recursivamente os filhos
+        return checkBalancing(current.getLeft()) && checkBalancing(current.getRight());
+    }
+
     /**
      * Método auxiliar para inserir uma nova palavra na árvore.
      * 
@@ -69,7 +135,6 @@ public class BalancedBinaryTree {
         return current;
     }
 
-
     /**
      * Insere uma nova palavra na árvore.
      *
@@ -86,7 +151,8 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * Método auxiliar private (usado pelo preOrderPublic()) para percorrer em pré-ordem na árvore.Usa recursividade.
+     * Método auxiliar private (usado pelo preOrderPublic()) para percorrer em
+     * pré-ordem na árvore.Usa recursividade.
      * 
      * @param noX o nó atual da árvore
      */
@@ -99,14 +165,16 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * Percorre em pré-ordem na árvore e imprime os valores das palavras em pré-ordem.
+     * Percorre em pré-ordem na árvore e imprime os valores das palavras em
+     * pré-ordem.
      */
     public void preOrderPublic() {
         preOrder(root);
     }
 
     /**
-     * Método auxiliar private (usado pelo inOrderPublic()) para percorrer em ordem na árvore. Usa recursividade.
+     * Método auxiliar private (usado pelo inOrderPublic()) para percorrer em ordem
+     * na árvore. Usa recursividade.
      * 
      * @param noX o nó atual da árvore
      */
@@ -126,7 +194,8 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * Método auxiliar private (usado pelo postOrderPublic()) para percorrer em pós-ordem na árvore.Usa recursividade.
+     * Método auxiliar private (usado pelo postOrderPublic()) para percorrer em
+     * pós-ordem na árvore.Usa recursividade.
      * 
      * @param noX o nó atual da árvore
      */
@@ -146,7 +215,8 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * Método auxiliar private (usado pelo print()) para imprimir todas as palavras da árvore, junto com suas linhas.  Usa recursividade.
+     * Método auxiliar private (usado pelo print()) para imprimir todas as palavras
+     * da árvore, junto com suas linhas. Usa recursividade.
      * 
      * @param noX o nó atual da árvore
      */
@@ -166,7 +236,8 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * Constrói uma string representando a árvore binária. Usa recursividade para percorrer os nós.
+     * Constrói uma string representando a árvore binária. Usa recursividade para
+     * percorrer os nós.
      * 
      * @param node o nó atual da árvore
      * @return a string representando a árvore binária
