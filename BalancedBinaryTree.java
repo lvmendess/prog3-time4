@@ -76,13 +76,12 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * Verifica se a árvore a partir da raiz fornecida é balanceada.
+     * Faz balanceamento na árvore inteira.
      *
      * @param raiz O nó raiz da árvore.
-     * @return true se a árvore é balanceada, false caso contrário.
      */
-    public int isBalanced() {
-        return checkBalancing(root);
+    public void balanceTree() {
+        checkBalancing(root);
     }
 
     /**
@@ -90,22 +89,18 @@ public class BalancedBinaryTree {
      * Verifica se a árvore binária é balanceada. Método auxiliar recursivo
      *
      * @param atual O nó atual da árvore.
-     * @return true se a árvore é balanceada, false caso contrário.
      */
-    private int checkBalancing(Word current) {
+    private void checkBalancing(Word current) {
         if (current == null) {
-            return 0;
+            return;
         }
-
-        int leftHeight = calculateHeight(current.getLeft());
-        int rightHeight = calculateHeight(current.getRight());
-
-        if (Math.abs(rightHeight - leftHeight) > 1) {
-            return rightHeight - leftHeight ; // Se a diferença de altura for maior que 1, não está balanceada
+        int balancing = calculateHeight(current.getRight()) - calculateHeight(current.getLeft());
+        current.setBalancingFactor(balancing);
+        if (Math.abs(balancing) > 1) {
+            orderBalancingFactor(current);
         }
-
-        // Verifica recursivamente os filhos
-        return checkBalancing(current.getRight()) - checkBalancing(current.getLeft());
+        checkBalancing(current.getRight());
+        checkBalancing(current.getLeft());
     }
 
     /**
