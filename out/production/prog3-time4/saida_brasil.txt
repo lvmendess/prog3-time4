@@ -112,7 +112,7 @@ resplandece 20
 retumbante 7
 risonho 19
 risonhoslindos 38
-salve 16, 42
+salve 16, 16, 42, 42
 seio 13, 40
 seja 43
 silva 3

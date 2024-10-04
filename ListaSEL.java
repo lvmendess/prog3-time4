@@ -28,53 +28,21 @@ public class ListaSEL {
      * 
      * @param l elemento a ser inserido
      */
+
     public void insert(Lines l){
-        if(empty()){
-            insertAtStart(l);
-        }else{
-            Lines aux=first;
-            if(l.getLine()<aux.getLine()){
-                insertAtStart(l);
-            }else{
-                Lines aux2=aux.getNext();
-                if(aux.getNext()==null){
-                    insertAtEnd(l);
-                }else{
-                    while (l.getLine()>aux.getLine()&&l.getLine()>aux2.getLine()&&aux2.getNext()!=null) {
-                        aux=aux.getNext();
-                        aux2=aux2.getNext();
-                    }
-                    if(l.getLine()>aux2.getLine()){
-                        aux2.setNext(l);
-                    }else{
-                        aux.setNext(l);
-                        l.setNext(aux2);
-                    }
-                }
-            }
-            
-        }
-       
-    }
-    /**
-     * Insere um elemento no início da lista.
-     * 
-     * @param l elemento a ser inserido
-     */
-    private void insertAtStart(Lines l){
-        l.setNext(first);
-        first=l;
-    }
-    private void insertAtEnd(Lines l){
         if(empty()){
             first=l;
         }else{
-            Lines aux = first;
-            while (aux.getNext()!=null) {
+            Lines aux=first;
+            while(aux.getNext()!=null){
                 aux=aux.getNext();
             }
-            aux.setNext(l);
+            if(l.getLine()!=aux.getLine()){
+                aux.setNext(l);
+
+            }
         }
+
     }
 
     /**

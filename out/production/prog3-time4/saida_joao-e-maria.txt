@@ -19,7 +19,7 @@ das 4
 deste 26
 enfrentava 5
 ensaiava 8
-era 1, 4, 9, 10, 12, 13, 14, 17, 18, 24, 27, 29
+era 1, 4, 9, 10, 10, 12, 13, 14, 17, 18, 24, 27, 29
 falava 2
 fatal 24
 fazdeconta 25
@@ -46,7 +46,7 @@ meu 2, 7, 15
 mim? 30
 minha 11
 mundo 28
-nao 16, 21, 27
+nao 16, 16, 16, 21, 27
 nascido 23
 nem 23
 noite 27
@@ -64,7 +64,7 @@ pois 28
 pra 26
 preferido 19
 princesa 13
-que 13, 15, 17, 23, 25, 27, 30
+que 13, 15, 17, 23, 25, 27, 30, 30
 quintal 26
 rei 9
 rock 8

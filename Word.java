@@ -23,6 +23,7 @@ public class Word {
      * Lista de linhas onde a palavra aparece.
      */
     private ListaSEL wordLines;
+    private int balancingFactor;
 
     /**
      * Construtor da classe Word.
@@ -126,4 +127,13 @@ public class Word {
     public void setWordLines(ListaSEL wordLines) {
         this.wordLines = wordLines;
     }
+
+    public int getBalancingFactor() {
+        return balancingFactor;
+    }
+
+    public void setBalancingFactor(int balancingFactor) {
+        this.balancingFactor = balancingFactor;
+    }
+    
 }
