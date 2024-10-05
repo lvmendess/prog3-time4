@@ -15,7 +15,44 @@ public class BalancedBinaryTree {
     public BalancedBinaryTree() {
         this.root = null;
     }
+ /**
+     * Método auxiliar para inserir uma nova palavra na árvore.
+     * 
+     * @param newNode a palavra a ser inserida
+     * @param current o nó atual da árvore
+     * @return o nó atualizado da árvore
+     */
+    private Word insertNew(Word newNode, Word current) {
+        if (current == null) {
+            return newNode;
+        }
+        if (current.getValue().compareTo(newNode.getValue()) > 0) {
+            current.setLeft(insertNew(newNode, current.getLeft()));
+            balanceTree();
+        } else if (current.getValue().compareTo(newNode.getValue()) < 0) {
+            current.setRight(insertNew(newNode, current.getRight()));
+            balanceTree();
+            return current;
+           
+        }
+ 
+        return current;
+    }
 
+    /**
+     * Insere uma nova palavra na árvore.
+     *
+     * @param newNode a palavra a ser inserida
+     */
+    public void insert(Word newNode) {
+        Word w = exists(newNode);
+        if (w == null) {
+            root = insertNew(newNode, root);
+        } else {
+            w.addLineAtList(newNode.getLines());
+        }
+
+    }
     /**
      * Verifica se uma palavra já existe na árvore.
      *
@@ -64,13 +101,13 @@ public class BalancedBinaryTree {
      * @param atual a palavra que está percorrendo
      * @return a altura final
      */
-    private int calculateHeight(Word root) {
-        if (root == null) {
+    private int calculateHeight(Word current) {
+        if (current == null) {
             return 0; // Se o nó for null, retorna 0
         }
         // Recursão para os filhos esquerda e direita
-        int leftHeight = calculateHeight(root.getLeft()) + (root.getLeft() == null ? 0 : 1);
-        int rightHeight = calculateHeight(root.getRight()) + (root.getLeft() == null ? 0 : 1);
+        int leftHeight = calculateHeight(current.getLeft()) + (current.getLeft() == null ? 0 : 1);
+        int rightHeight = calculateHeight(current.getRight()) + (current.getLeft() == null ? 0 : 1);
         // Retorna a maior altura entre as subárvores esquerda e direita
         return Math.max(leftHeight, rightHeight);
     }
@@ -103,41 +140,36 @@ public class BalancedBinaryTree {
         checkBalancing(current.getLeft());
     }
 
-    /**
-     * Método auxiliar para inserir uma nova palavra na árvore.
-     * 
-     * @param newNode a palavra a ser inserida
-     * @param current o nó atual da árvore
-     * @return o nó atualizado da árvore
-     */
-    private Word insertNew(Word newNode, Word current) {
-        if (current == null) {
-            return newNode;
-        }
-        if (current.getValue().compareTo(newNode.getValue()) > 0) {
-            current.setLeft(insertNew(newNode, current.getLeft()));
-        } else if (current.getValue().compareTo(newNode.getValue()) < 0) {
-            current.setRight(insertNew(newNode, current.getRight()));
-            return current;
-        }
+    private void orderBalancingFactor(Word current){
+        if(current.getBalancingFactor()==-2){
+            if(current.getLeft().getBalancingFactor()==-1||current.getBalancingFactor()==0){
+                rotationLeftLeft();
+            } else if (current.getRight().getBalancingFactor()==1) {
+                rotationLeftRight();
+            }
+        }else if(current.getBalancingFactor()==2){
+            if(current.getLeft().getBalancingFactor()==1||current.getBalancingFactor()==0){
+                rotationRightRight();
+            } else if (current.getRight().getBalancingFactor()==-1) {
+                rotationRightLeft();
+            }
 
-        return current;
+        }
     }
-
-    /**
-     * Insere uma nova palavra na árvore.
-     *
-     * @param newNode a palavra a ser inserida
-     */
-    public void insert(Word newNode) {
-        Word w = exists(newNode);
-        if (w == null) {
-            root = insertNew(newNode, root);
-        } else {
-            w.addLineAtList(newNode.getLines());
-        }
+    private void rotationLeftLeft(){
 
     }
+    private void rotationRightRight(){
+
+    }
+    private void rotationLeftRight(){
+
+    }
+    private void rotationRightLeft(){
+
+    }
+
+   
 
     /**
      * Método auxiliar private (usado pelo preOrderPublic()) para percorrer em
