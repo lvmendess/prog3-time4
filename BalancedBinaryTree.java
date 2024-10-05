@@ -86,14 +86,7 @@ public class BalancedBinaryTree {
         }
     }
 
-    /**
-     * Método para calcular altura na árvore.
-     * 
-     * @return a altura da árvore
-     */
-    public int height() {
-        return calculateHeight(root);
-    }
+
 
     /**
      * Método auxiliar para calcular altura. Usa recursividade
@@ -103,13 +96,22 @@ public class BalancedBinaryTree {
      */
     private int calculateHeight(Word current) {
         if (current == null) {
-            return 0; // Se o nó for null, retorna 0
+            return -1;
         }
-        // Recursão para os filhos esquerda e direita
-        int leftHeight = calculateHeight(current.getLeft()) + (current.getLeft() == null ? 0 : 1);
-        int rightHeight = calculateHeight(current.getRight()) + (current.getLeft() == null ? 0 : 1);
-        // Retorna a maior altura entre as subárvores esquerda e direita
-        return Math.max(leftHeight, rightHeight);
+        if (current.getRight() == null && current.getLeft() == null) {
+            return 0;
+        } else if (current.getLeft() == null) {
+            return 1 + calculateHeight(current.getRight());
+        } else if (current.getRight() == null) {
+            return 1 + calculateHeight(current.getLeft());
+        } else {
+            if (calculateHeight(current.getLeft()) > calculateHeight(current.getRight())) {
+                return 1 + calculateHeight(current.getLeft());
+            } else {
+                return 1 + calculateHeight(current.getRight());
+            }
+        }
+
     }
 
     /**
@@ -131,13 +133,13 @@ public class BalancedBinaryTree {
         if (current == null) {
             return;
         }
+        checkBalancing(current.getRight());
+        checkBalancing(current.getLeft());
         int balancing = calculateHeight(current.getRight()) - calculateHeight(current.getLeft());
         current.setBalancingFactor(balancing);
         if (Math.abs(balancing) > 1) {
             orderBalancingFactor(current);
         }
-        checkBalancing(current.getRight());
-        checkBalancing(current.getLeft());
     }
 
     private void orderBalancingFactor(Word current){
