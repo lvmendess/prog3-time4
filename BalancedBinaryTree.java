@@ -110,7 +110,7 @@ public class BalancedBinaryTree {
             } else {
                 return 1 + calculateHeight(current.getRight());
             }
-        }
+        }//está dando erro nas linhas 108 e 106 - livia
 
     }
 
@@ -144,34 +144,38 @@ public class BalancedBinaryTree {
 
     private void orderBalancingFactor(Word current){
         if(current.getBalancingFactor()==-2){
-            if(current.getLeft().getBalancingFactor()==-1||current.getBalancingFactor()==0){
-                rotationLeftLeft( current);
-            } else if (current.getRight().getBalancingFactor()==1) {
-                rotationLeftRight( current);
+            if(current.getLeft().getBalancingFactor()==-1||current.getRight().getBalancingFactor()==0){
+                rotationLeftLeft(current);
+            } else if (current.getRight().getBalancingFactor()==1){
+                rotationLeftRight(current);
             }
         }else if(current.getBalancingFactor()==2){
-            if(current.getLeft().getBalancingFactor()==1||current.getBalancingFactor()==0){
-                rotationRightRight( current);
-            } else if (current.getRight().getBalancingFactor()==-1) {
-                rotationRightLeft( current);
+            if(current.getLeft().getBalancingFactor()==1||current.getRight().getBalancingFactor()==0){
+                rotationRightRight(current);
+            } else if (current.getRight().getBalancingFactor()==-1){
+                rotationRightLeft(current);
             }
-
         }
     }
-    private void rotationLeftLeft(Word current){
 
+    private void rotationLeftLeft(Word current){//livia e sanzio
+        current.getLeft().setRight(current);
+        current = current.getLeft();
     }
+
     private void rotationRightRight(Word current){
 
     }
-    private void rotationLeftRight(Word current){
 
+    private void rotationLeftRight(Word current){//livia e sanzio
+        current.getLeft().getRight().setLeft(current.getLeft());
+        current.setLeft(current.getLeft().getRight());
+        rotationLeftLeft(current);
     }
+
     private void rotationRightLeft(Word current){
 
     }
-
-   
 
     /**
      * Método auxiliar private (usado pelo preOrderPublic()) para percorrer em
