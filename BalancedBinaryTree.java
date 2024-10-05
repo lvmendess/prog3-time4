@@ -143,29 +143,29 @@ public class BalancedBinaryTree {
     private void orderBalancingFactor(Word current){
         if(current.getBalancingFactor()==-2){
             if(current.getLeft().getBalancingFactor()==-1||current.getBalancingFactor()==0){
-                rotationLeftLeft();
+                rotationLeftLeft( current);
             } else if (current.getRight().getBalancingFactor()==1) {
-                rotationLeftRight();
+                rotationLeftRight( current);
             }
         }else if(current.getBalancingFactor()==2){
             if(current.getLeft().getBalancingFactor()==1||current.getBalancingFactor()==0){
-                rotationRightRight();
+                rotationRightRight( current);
             } else if (current.getRight().getBalancingFactor()==-1) {
-                rotationRightLeft();
+                rotationRightLeft( current);
             }
 
         }
     }
-    private void rotationLeftLeft(){
+    private void rotationLeftLeft(Word current){
 
     }
-    private void rotationRightRight(){
+    private void rotationRightRight(Word current){
 
     }
-    private void rotationLeftRight(){
+    private void rotationLeftRight(Word current){
 
     }
-    private void rotationRightLeft(){
+    private void rotationRightLeft(Word current){
 
     }
 
