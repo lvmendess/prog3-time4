@@ -1,5 +1,291 @@
+again 21
+all 41, 42, 68, 72
+already 8
+amplified 72
+and 9, 22, 45, 49, 69, 70, 74, 76, 77, 78, 79
+another 81
+anything 102
+are 7, 77
+arms 7
+baby 80
+back 15, 20, 21
+backs 18
+barely 45
+beat 51
+been 69
+beginnin 68
+being 79
+believe 71
+best 71
+better 22, 24, 25, 29, 30, 34, 54, 55, 59, 60, 64, 90, 91, 95, 96, 100
+between 79
+blaow 14
+blow 26, 31, 56, 61, 92, 97
+blows 41
+bombs 10
+booed 69
+borin 39
+broke 19
+but 9, 10, 12, 16, 19, 39, 46, 51, 70, 85
+buy 75
+caged 67
+call 66
+calm 9
+can 102
+cannot 86
+cant 73, 74
+capture 4, 22
+caught 79
+cause 46, 75
+chance 26, 31, 56, 61, 92, 97
+change 66
+changed 68
+chewed 69
+choked 16
+chokin 13
+clocks 14
+close 40
+coasttocoast 42
+cold 46, 47
+come 12
+comes 27, 32, 57, 62, 93, 98
+crowd 11
+cypher 70
+dadadom 52
+dadom 52
+dahdah 52
+daughter 45
+day 81
+diapers 75
+dogs 67
+donna 79
+dont 18, 22, 47, 75
+dope 18
+down 11
+drama 80
+drop 10
+easy 17
+end 83
+escapin 36
+even 77
+ever 3
+everybodys 13
+everything 3
+fact 73
+fail 87
+failures 84
+family 74
+farther 44
+father 44, 79
+feed 78
+feet 87
+flows 48
+food 75
+for 37, 74, 80
+forgettin 10
+formulate 83
+from 44
+games 66
+gapin 36
+get 26, 31, 56, 61, 73, 92, 97
+gettin 77
+give 17
+globetrotter 43
+god 44
+goddamn 75
+goes 11, 15, 16, 20, 45, 46, 51
+got 82, 85, 88
+gotten 82
+gravity 15
+grow 86
+grown 44
+grows 40, 41
 had 2
+hard 77
+harder 40, 77
+have 17
+heavy 7
+her 80
+here 46, 87
+hes 9, 13, 16, 18, 19, 43, 44, 47
+him 22, 42, 47
+his 7, 8, 12, 18, 36, 45
+hoes 42, 47
+hold 46
+hole 36
+home 20, 44, 45
+homie 41
+hope 22
+hotter 41
+how 13
+ima 66
+inside 72
+its 20, 41, 50, 77, 87
+ive 69, 82
+jail 83
+jokin 13
+just 5
+keeps 10
+kept 70
+king 37
+knees 7
+known 43
+knows 18, 19, 44, 45
+lab 21
+let 5, 25, 30, 55, 60, 91, 96
+life 39, 74, 76
+lifetime 27, 32, 57, 62, 93, 98
+like 67, 82
+lonely 43
 look 1
-one 2
-shot 2
-you 2
+looks 9
+lose 24, 29, 54, 59, 90, 95
+lot 86
+loud 11
+love 85
+mad 16
+make 37
+mama 80
+man 75, 102
+matter 18
+may 88
+mekhi 76
+mind 102
+mine 37
+miss 26, 31, 56, 61, 92, 97
+mobile 20
+mom 85
+moment 3, 22, 25, 30, 55, 60, 91, 96
+moms 8
+monotonys 81
+mood 68
+more 47, 66
+motherfuckin 67, 84
+mouth 12
+move 38
+moved 48
+movie 76
+much 80
+music 24, 29, 54, 59, 90, 95
+nada 49
+nervous 9
+never 25, 30, 55, 60, 91, 96
+new 38
+next 48, 70
+ninetofive 73
+normal 39
+nose 46
+nosedove 49
+not 26, 31, 56, 61, 84, 87, 92, 97
+now 13
+off 67, 69
+old 21, 50, 86
+once 27, 32, 57, 62, 93, 98
+one 2, 3, 26, 31, 56, 61, 81, 92, 97
+only 26, 31, 40, 44, 56, 61, 84, 88, 92, 97
+ope 15
+opens 12
+opera 49
+opportunity 2, 27, 32, 57, 62, 88, 93, 98
+option 84
+order 38
+out 12, 14, 69
+over 14, 41
+own 25, 30, 45, 55, 60, 91, 96
+pain 72
+palms 7
+partner 50
+pass 22
+payin 71
+phifer 76
+pied 71
+piper 71
+playin 68
+plot 83
+plus 78
+point 82
+postmortem 40
+prima 79
+product 47
+provide 74
+rabbit 16
+rage 66
+ready 9
+reality 15
+rhapsody 21
+rhymin 70
+right 70, 74
+roads 43
+roof 67
+ropes 18
+run 14
+salems 86
+schmoe 48
+screamin 80
+seed 78
+seize 3
+set 102
+shot 2, 26, 31, 56, 61, 83, 87, 92, 97
+shows 42
+slip? 5
+snail 82
+snap 15
+soap 49
+sold 49
+somebodys 71
+souls 36
+spaghetti 8
+spit 69
+spot 81
+stage 69
+stagnant 19
+stamps 75
+stay 81
+stepped 70
+success 84
+superstardoms 39
+suppose 50
+surface 9
+sweater 8
+sweaty 7
+takin 37
+tear 67
+teetertotter 78
+that 17, 19, 36, 73, 88
+thats 20
+the 9, 11, 12, 14, 21, 24, 25, 29, 30, 37, 43, 46, 48, 49, 51, 54, 55, 59, 60, 68, 70, 71, 72, 74, 82, 88, 90, 91, 95, 96
+there 15, 16
+theres 8, 76
+these 18, 42, 47, 75, 77
+they 48
+this 20, 21, 22, 27, 32, 36, 37, 57, 62, 67, 76, 85, 88, 93, 98
+through 36
+times 14, 77
+told 50
+too 80
+toward 38
+trailers 85
+tryna 78
+two 67
+type 74
+unfolds 50
+vomit 8
+wanna 80
+want 47
+wanted 3
+was 68
+water 46, 78
+weak 7
+what 11, 66
+when 20
+who 48
+whole 11, 18
+with 73
+wont 12, 16, 17
+words 12
+world 37, 38
+would 4
+wrote 11
+you 2, 3, 4, 24, 25, 26, 29, 30, 31, 34, 54, 55, 56, 59, 60, 61, 64, 66, 85, 90, 91, 92, 95, 96, 97, 100, 102
+your 26, 31, 46, 56, 61, 92, 97, 102
+yourself 24, 29, 54, 59, 90, 95
