@@ -136,7 +136,7 @@ public class BalancedBinaryTree {
         checkBalancing(current.getLeft());
         int balancing = calculateHeight(current.getRight()) - calculateHeight(current.getLeft());
         current.setBalancingFactor(balancing);
-        return Math.abs(balancing);
+        return balancing;
     }
 
     /**
