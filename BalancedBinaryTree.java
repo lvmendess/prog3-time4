@@ -179,7 +179,7 @@ public class BalancedBinaryTree {
     }
 
     private Word rotationRightRight(Word current){
-        return current;
+        return current; //à implementar lógica de rotação
     }
 
     private Word rotationLeftRight(Word current){//livia e sanzio
@@ -191,7 +191,7 @@ public class BalancedBinaryTree {
     }
 
     private Word rotationRightLeft(Word current){
-        return current;
+        return current; //à implementar lógica de rotação
     }
 
     /**
