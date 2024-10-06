@@ -158,19 +158,19 @@ public class BalancedBinaryTree {
 
         }
     }
+    private void rotationLeftLeft(Word current){
+    }
+    
     /*Metodo de Rotacao RR(Esquerda simples)
      */
-    private void rotationLeftLeft(Word current){
-                Word aux1 = current.getLeft();//Salva filho esquerdo 
+    private void rotationRightRight(Word current){
+        Word aux1 = current.getLeft();//Salva filho esquerdo 
         Word aux2 = current.getRight();//Salva filho direito
         
         aux1.getRight(current);
         current.getLeft(aux2);
         calculateHeight(current);
         calculateHeight(aux1);
-    }
-    private void rotationRightRight(Word current){
-
     }
     private void rotationLeftRight(Word current){
 
