@@ -158,19 +158,24 @@ public class BalancedBinaryTree {
         }
     }
 
-    private void rotationLeftLeft(Word current){//livia e sanzio
+    private Word rotationLeftLeft(Word current){//livia e sanzio
+        Word aux = current.getLeft().getRight();
         current.getLeft().setRight(current);
         current = current.getLeft();
+        current.getRight().setLeft(aux);
+        return current;
     }
 
     private void rotationRightRight(Word current){
-
+        
     }
 
-    private void rotationLeftRight(Word current){//livia e sanzio
+    private Word rotationLeftRight(Word current){//livia e sanzio
+        Word aux = current.getLeft().getRight().getLeft();
         current.getLeft().getRight().setLeft(current.getLeft());
         current.setLeft(current.getLeft().getRight());
-        rotationLeftLeft(current);
+        current.getLeft().getLeft().setRight(aux);
+        return rotationLeftLeft(current);
     }
 
     private void rotationRightLeft(Word current){
@@ -179,7 +184,7 @@ public class BalancedBinaryTree {
 
     /**
      * Método auxiliar private (usado pelo preOrderPublic()) para percorrer em
-     * pré-ordem na árvore.Usa recursividade.
+     * pré-ordem na árvore. Usa recursividade.
      * 
      * @param noX o nó atual da árvore
      */
