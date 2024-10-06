@@ -15,7 +15,8 @@ public class BalancedBinaryTree {
     public BalancedBinaryTree() {
         this.root = null;
     }
- /**
+
+    /**
      * Método auxiliar para inserir uma nova palavra na árvore.
      * 
      * @param newNode a palavra a ser inserida
@@ -31,9 +32,9 @@ public class BalancedBinaryTree {
         } else if (current.getValue().compareTo(newNode.getValue()) < 0) {
             current.setRight(insertNew(newNode, current.getRight()));
         }
-        if(balanceTree(current)>1){
+        if (balanceTree(current) > 1) {
             return orderBalancingFactor(current);
-        }else{
+        } else {
             return current;
         }
 
@@ -53,6 +54,7 @@ public class BalancedBinaryTree {
         }
 
     }
+
     /**
      * Verifica se uma palavra já existe na árvore.
      *
@@ -86,12 +88,10 @@ public class BalancedBinaryTree {
         }
     }
 
-
-
     /**
      * Método auxiliar para calcular altura. Usa recursividade
      * 
-     * @param atual a palavra que está percorrendo
+     * @param current a palavra que está percorrendo
      * @return a altura final
      */
     private int calculateHeight(Word current) {
@@ -99,44 +99,34 @@ public class BalancedBinaryTree {
             return 0;
         }
         return 1 + Math.max(calculateHeight(current.getLeft()), calculateHeight(current.getRight()));
-        /*if (current.getRight() == null && current.getLeft() == null) {
-            return 0;
-        } else if (current.getLeft() == null) {
-            return 1 + calculateHeight(current.getRight());
-        } else if (current.getRight() == null) {
-            return 1 + calculateHeight(current.getLeft());
-        } else {
-            if (calculateHeight(current.getLeft()) > calculateHeight(current.getRight())) {
-                return 1 + calculateHeight(current.getLeft());
-            } else {
-                return 1 + calculateHeight(current.getRight());
-            }
-        }*/
     }
 
     /**
      * Faz balanceamento na árvore inteira.
-     *
-     * @param raiz O nó raiz da árvore.
      */
     public void balanceTree() {
         checkBalancing(root);
     }
 
     /**
-     * Confere balanceamento na árvore a partir de um nó específico.
+     * Verifica o balanceamento da árvore a partir de um nó específico.
      *
-     * @param raiz O nó raiz da sub-árvore.
+     * @param w O nó a partir do qual o balanceamento será verificado.
+     * @return O fator de balanceamento da árvore, que é a diferença entre a altura
+     *         das subárvores direita e esquerda.
      */
     public int balanceTree(Word w) {
         return checkBalancing(w);
     }
 
     /**
-     * /**
-     * Verifica se a árvore binária é balanceada. Método auxiliar recursivo
+     * Verifica o balanceamento de um nó e atualiza seu fator de balanceamento.
+     * Este método é recursivo e percorre a árvore para calcular o fator de
+     * balanceamento de cada nó.
      *
-     * @param atual O nó atual da árvore.
+     * @param current O nó atual da árvore que está sendo verificado.
+     * @return A diferença absoluta entre as alturas das subárvores direita e
+     *         esquerda do nó.
      */
     private int checkBalancing(Word current) {
         if (current == null) {
@@ -149,28 +139,44 @@ public class BalancedBinaryTree {
         return Math.abs(balancing);
     }
 
-    private Word orderBalancingFactor(Word current){
-        if(current.getBalancingFactor()==-2){
+    /**
+     * Ajusta o balanceamento de um nó específico, aplicando as rotações
+     * necessárias.
+     * Verifica o fator de balanceamento e aplica rotações simples ou duplas
+     * conforme necessário.
+     *
+     * @param current O nó cuja árvore está desbalanceada.
+     * @return O novo nó raiz após as rotações (se necessárias) para balancear a
+     *         árvore.
+     */
+    private Word orderBalancingFactor(Word current) {
+        if (current.getBalancingFactor() == -2) {
             int balanceRight = checkBalancing(current.getRight());
             int balanceLeft = checkBalancing(current.getLeft());
-            if(balanceLeft==-1||balanceRight==0){
+            if (balanceLeft == -1 || balanceRight == 0) {
                 current = rotationLeftLeft(current);
-            } else if (balanceRight==1){
+            } else if (balanceRight == 1) {
                 current = rotationLeftRight(current);
             }
-        }else if(current.getBalancingFactor()==2){
+        } else if (current.getBalancingFactor() == 2) {
             int balanceRight = checkBalancing(current.getRight());
             int balanceLeft = checkBalancing(current.getLeft());
-            if(balanceLeft==1||balanceRight==0){
+            if (balanceLeft == 1 || balanceRight == 0) {
                 current = rotationRightRight(current);
-            } else if (balanceRight==-1){
+            } else if (balanceRight == -1) {
                 current = rotationRightLeft(current);
             }
         }
         return current;
     }
 
-    private Word rotationLeftLeft(Word current){//livia e sanzio
+    /**
+     * Realiza uma rotação simples à esquerda (LL) em uma árvore desbalanceada.
+     *
+     * @param current O nó atual onde será realizada a rotação.
+     * @return O novo nó raiz após a rotação.
+     */
+    private Word rotationLeftLeft(Word current) {
         Word aux = current.getLeft().getRight();
         current.getLeft().setRight(current);
         current = current.getLeft();
@@ -178,11 +184,27 @@ public class BalancedBinaryTree {
         return current;
     }
 
-    private Word rotationRightRight(Word current){
-        return current; //à implementar lógica de rotação
+    /**
+     * Realiza uma rotação simples à direita (RR) em uma árvore desbalanceada.
+     *
+     * @param current O nó atual onde será realizada a rotação.
+     * @return O novo nó raiz após a rotação.
+     */
+    private Word rotationRightRight(Word current) {
+        Word aux = current.getRight().getLeft();
+        current.getRight().setLeft(current);
+        current = current.getRight();
+        current.getLeft().setRight(aux);
+        return current;
     }
 
-    private Word rotationLeftRight(Word current){//livia e sanzio
+    /**
+     * Realiza uma rotação dupla à esquerda (LR) em uma árvore desbalanceada.
+     *
+     * @param current O nó atual onde será realizada a rotação.
+     * @return O novo nó raiz após a rotação dupla.
+     */
+    private Word rotationLeftRight(Word current) {
         Word aux = current.getLeft().getRight().getLeft();
         current.getLeft().getRight().setLeft(current.getLeft());
         current.setLeft(current.getLeft().getRight());
@@ -190,8 +212,18 @@ public class BalancedBinaryTree {
         return rotationLeftLeft(current);
     }
 
-    private Word rotationRightLeft(Word current){
-        return current; //à implementar lógica de rotação
+    /**
+     * Realiza uma rotação dupla à direita (RL) em uma árvore desbalanceada.
+     *
+     * @param current O nó atual onde será realizada a rotação.
+     * @return O novo nó raiz após a rotação dupla.
+     */
+    private Word rotationRightLeft(Word current) {
+        Word aux = current.getRight().getLeft().getRight();
+        current.getRight().getLeft().setRight(current.getRight());
+        current.setRight(current.getRight().getLeft());
+        current.getRight().getRight().setLeft(aux);
+        return rotationRightRight(current);
     }
 
     /**

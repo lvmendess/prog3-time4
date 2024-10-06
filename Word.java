@@ -128,10 +128,18 @@ public class Word {
         this.wordLines = wordLines;
     }
 
+    /**
+     * Método que retorna o fator de balanceamento ao Word
+     * @return balancingFactor
+     */
     public int getBalancingFactor() {
         return balancingFactor;
     }
 
+    /**
+     * Método que seta o fator de balanceamento ao Word.
+     * @param balancingFactor Int number
+     */
     public void setBalancingFactor(int balancingFactor) {
         this.balancingFactor = balancingFactor;
     }
