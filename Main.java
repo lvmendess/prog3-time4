@@ -15,12 +15,12 @@ public class Main {
         control.printTree();
         control.saveTreeToTxt("saida_faroeste.txt");
 
-        System.out.println();
+        // System.out.println();
 
-        Control control2 = new Control();
-        control2.initialize("dataset\\brasil.txt");
-        control2.printTree();
-        control2.saveTreeToTxt("saida_brasil.txt");
+        // Control control2 = new Control();
+        // control2.initialize("dataset\\brasil.txt");
+        // control2.printTree();
+        // control2.saveTreeToTxt("saida_brasil.txt");
 
     }
 }
