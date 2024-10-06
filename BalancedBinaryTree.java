@@ -28,15 +28,15 @@ public class BalancedBinaryTree {
         }
         if (current.getValue().compareTo(newNode.getValue()) > 0) {
             current.setLeft(insertNew(newNode, current.getLeft()));
-            balanceTree();
         } else if (current.getValue().compareTo(newNode.getValue()) < 0) {
             current.setRight(insertNew(newNode, current.getRight()));
-            balanceTree();
-            return current;
-           
         }
- 
-        return current;
+        if(balanceTree(current)>1){
+            return orderBalancingFactor(current);
+        }else{
+            return current;
+        }
+
     }
 
     /**
@@ -96,9 +96,10 @@ public class BalancedBinaryTree {
      */
     private int calculateHeight(Word current) {
         if (current == null) {
-            return -1;
+            return 0;
         }
-        if (current.getRight() == null && current.getLeft() == null) {
+        return 1 + Math.max(calculateHeight(current.getLeft()), calculateHeight(current.getRight()));
+        /*if (current.getRight() == null && current.getLeft() == null) {
             return 0;
         } else if (current.getLeft() == null) {
             return 1 + calculateHeight(current.getRight());
@@ -110,8 +111,7 @@ public class BalancedBinaryTree {
             } else {
                 return 1 + calculateHeight(current.getRight());
             }
-        }//está dando erro nas linhas 108 e 106 - livia
-
+        }*/
     }
 
     /**
@@ -124,38 +124,50 @@ public class BalancedBinaryTree {
     }
 
     /**
+     * Confere balanceamento na árvore a partir de um nó específico.
+     *
+     * @param raiz O nó raiz da sub-árvore.
+     */
+    public int balanceTree(Word w) {
+        return checkBalancing(w);
+    }
+
+    /**
      * /**
      * Verifica se a árvore binária é balanceada. Método auxiliar recursivo
      *
      * @param atual O nó atual da árvore.
      */
-    private void checkBalancing(Word current) {
+    private int checkBalancing(Word current) {
         if (current == null) {
-            return;
+            return 0;
         }
         checkBalancing(current.getRight());
         checkBalancing(current.getLeft());
         int balancing = calculateHeight(current.getRight()) - calculateHeight(current.getLeft());
         current.setBalancingFactor(balancing);
-        if (Math.abs(balancing) > 1) {
-            orderBalancingFactor(current);
-        }
+        return Math.abs(balancing);
     }
 
-    private void orderBalancingFactor(Word current){
+    private Word orderBalancingFactor(Word current){
         if(current.getBalancingFactor()==-2){
-            if(current.getLeft().getBalancingFactor()==-1||current.getRight().getBalancingFactor()==0){
-                rotationLeftLeft(current);
-            } else if (current.getRight().getBalancingFactor()==1){
-                rotationLeftRight(current);
+            int balanceRight = checkBalancing(current.getRight());
+            int balanceLeft = checkBalancing(current.getLeft());
+            if(balanceLeft==-1||balanceRight==0){
+                current = rotationLeftLeft(current);
+            } else if (balanceRight==1){
+                current = rotationLeftRight(current);
             }
         }else if(current.getBalancingFactor()==2){
-            if(current.getLeft().getBalancingFactor()==1||current.getRight().getBalancingFactor()==0){
-                rotationRightRight(current);
-            } else if (current.getRight().getBalancingFactor()==-1){
-                rotationRightLeft(current);
+            int balanceRight = checkBalancing(current.getRight());
+            int balanceLeft = checkBalancing(current.getLeft());
+            if(balanceLeft==1||balanceRight==0){
+                current = rotationRightRight(current);
+            } else if (balanceRight==-1){
+                current = rotationRightLeft(current);
             }
         }
+        return current;
     }
 
     private Word rotationLeftLeft(Word current){//livia e sanzio
@@ -166,8 +178,8 @@ public class BalancedBinaryTree {
         return current;
     }
 
-    private void rotationRightRight(Word current){
-        
+    private Word rotationRightRight(Word current){
+        return current; //à implementar lógica de rotação
     }
 
     private Word rotationLeftRight(Word current){//livia e sanzio
@@ -178,8 +190,8 @@ public class BalancedBinaryTree {
         return rotationLeftLeft(current);
     }
 
-    private void rotationRightLeft(Word current){
-
+    private Word rotationRightLeft(Word current){
+        return current; //à implementar lógica de rotação
     }
 
     /**
